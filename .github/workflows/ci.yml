@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '40 1 * * *'
 
 defaults:
   run:
@@ -23,3 +25,11 @@ jobs:
       - uses: actions/checkout@v2
       - run: brew install --verbose Formula/*.rb
       - run: brew test --verbose Formula/*.rb
+      - run: brew audit --strict Formula/*.rb
+
+  formula:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: tools/formula.sh
+      - run: git diff --exit-code
