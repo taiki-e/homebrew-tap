@@ -22,7 +22,7 @@ TESTS=(
     'system "#{bin}/parse-changelog", "--version"'
 )
 
-cd "$(cd "$(dirname "${0}")" && pwd)"/..
+cd "$(cd "$(dirname "$0")" && pwd)"/..
 
 for i in "${!PACKAGES[@]}"; do
     package="${PACKAGES[${i}]}"
@@ -31,8 +31,8 @@ for i in "${!PACKAGES[@]}"; do
     tag=$(curl -LsSf "https://api.github.com/repos/${OWNER}/${package}/releases/latest" | jq -r '.tag_name')
     mac_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
     linux_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
-    mac_sha="$(curl -LsSf "$mac_url" | sha256sum)"
-    linux_sha="$(curl -LsSf "$linux_url" | sha256sum)"
+    mac_sha="$(curl -LsSf "${mac_url}" | sha256sum)"
+    linux_sha="$(curl -LsSf "${linux_url}" | sha256sum)"
     set +x
 
     {

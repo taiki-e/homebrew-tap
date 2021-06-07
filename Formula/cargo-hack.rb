@@ -3,17 +3,17 @@
 class CargoHack < Formula
   desc "Cargo subcommand for testing and continuous integration"
   homepage "https://github.com/taiki-e/cargo-hack"
-  version "0.5.5"
+  version "0.5.6"
   license any_of: ["Apache-2.0", "MIT"]
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.5/cargo-hack-x86_64-apple-darwin.tar.gz"
-    sha256 "8a802f72e7b746cbfa3988ba0a8e8a4eb3ddc0ae83d44bf7eb982588e3df2bcc"
+    url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.6/cargo-hack-x86_64-apple-darwin.tar.gz"
+    sha256 "26ceb577099fb9b7a6128527e666c6737e4eb563c553496a83af347be32fc692"
   end
   if OS.linux?
-    url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.5/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "632f228655646f75a6fb237cd18d11b6aabf9b4814297eda65d3f354bf8c9268"
+    url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.6/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
+    sha256 "f0d616d878a674b01ff3eaad459bf93e9a424bf54ac12c0e131f70c9f4d98bdb"
   end
 
   def install
