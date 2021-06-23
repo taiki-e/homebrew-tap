@@ -14,7 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - ubuntu-latest
+          - ubuntu-18.04
           - macos-latest
     runs-on: ${{ matrix.os }}
     steps:
@@ -24,7 +24,7 @@ jobs:
       - run: brew audit --strict Formula/*.rb
 
   formula:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
       - run: tools/formula.sh
