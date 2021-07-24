@@ -3,17 +3,17 @@
 class ParseChangelog < Formula
   desc "Simple changelog parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-changelog"
-  version "0.4.2"
+  version "0.4.3"
   license any_of: ["Apache-2.0", "MIT"]
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.2/parse-changelog-x86_64-apple-darwin.tar.gz"
-    sha256 "3cc003763118f9d4d83f68f3a1e804cd6e33c2f7c4678bbf54ee0a54a11e3878"
+    url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.3/parse-changelog-x86_64-apple-darwin.tar.gz"
+    sha256 "7f717140cc8cc8531e443195f5ae1913d3ab01033d3538f7394622c561c5c470"
   end
   if OS.linux?
-    url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.2/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "6bbe76fb0d634b5a84017ccc80bf97bb8af81a44b5c44fc5f08954671d4f63ef"
+    url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.3/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
+    sha256 "f4120023ad79b68e3287e775c4e55773db8a298e7c995fde67c99c31ab1d38c6"
   end
 
   def install
