@@ -11,14 +11,22 @@ IFS=$'\n\t'
 OWNER="taiki-e"
 PACKAGES=(
     "cargo-hack"      # https://github.com/taiki-e/cargo-hack
+    "cargo-llvm-cov"  # https://github.com/taiki-e/cargo-llvm-cov
     "parse-changelog" # https://github.com/taiki-e/parse-changelog
+)
+TAGS=(
+    "" # latest stable
+    "v0.1.0-alpha.4"
+    "" # latest stable
 )
 DESCRIPTIONS=(
     "Cargo subcommand for testing and continuous integration"
+    "Wrapper for source based code coverage (-Zinstrument-coverage)"
     "Simple changelog parser, written in Rust"
 )
 TESTS=(
     'system "#{bin}/cargo-hack", "hack", "--version"'
+    'system "#{bin}/cargo-llvm-cov", "llvm-cov", "--version"'
     'system "#{bin}/parse-changelog", "--version"'
 )
 
@@ -28,7 +36,10 @@ for i in "${!PACKAGES[@]}"; do
     package="${PACKAGES[${i}]}"
     class=$(sed -r 's/(^|-)(\w)/\U\2/g' <<<"${package}")
     set -x
-    tag=$(curl -LsSf "https://api.github.com/repos/${OWNER}/${package}/releases/latest" | jq -r '.tag_name')
+    tag="${TAGS[${i}]}"
+    if [[ -z "${tag}" ]]; then
+        tag=$(curl -LsSf "https://api.github.com/repos/${OWNER}/${package}/releases/latest" | jq -r '.tag_name')
+    fi
     mac_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
     linux_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
     mac_sha="$(curl -LsSf "${mac_url}" | sha256sum)"
