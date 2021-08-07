@@ -16,12 +16,12 @@ PACKAGES=(
 )
 TAGS=(
     "" # latest stable
-    "v0.1.0-alpha.4"
+    "v0.1.0-alpha.5"
     "" # latest stable
 )
 DESCRIPTIONS=(
     "Cargo subcommand for testing and continuous integration"
-    "Wrapper for source based code coverage (-Zinstrument-coverage)"
+    "Wrapper for source based code coverage (-Z instrument-coverage)"
     "Simple changelog parser, written in Rust"
 )
 TESTS=(
