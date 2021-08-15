@@ -14,14 +14,9 @@ PACKAGES=(
     "cargo-llvm-cov"  # https://github.com/taiki-e/cargo-llvm-cov
     "parse-changelog" # https://github.com/taiki-e/parse-changelog
 )
-TAGS=(
-    "" # latest stable
-    "v0.1.0-alpha.5"
-    "" # latest stable
-)
 DESCRIPTIONS=(
     "Cargo subcommand for testing and continuous integration"
-    "Wrapper for source based code coverage (-Z instrument-coverage)"
+    "Cargo subcommand for LLVM source-based code coverage (-Z instrument-coverage)"
     "Simple changelog parser, written in Rust"
 )
 TESTS=(
@@ -36,10 +31,7 @@ for i in "${!PACKAGES[@]}"; do
     package="${PACKAGES[${i}]}"
     class=$(sed -r 's/(^|-)(\w)/\U\2/g' <<<"${package}")
     set -x
-    tag="${TAGS[${i}]}"
-    if [[ -z "${tag}" ]]; then
-        tag=$(curl -LsSf "https://api.github.com/repos/${OWNER}/${package}/releases/latest" | jq -r '.tag_name')
-    fi
+    tag=$(curl -LsSf "https://api.github.com/repos/${OWNER}/${package}/releases/latest" | jq -r '.tag_name')
     mac_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
     linux_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
     mac_sha="$(curl -LsSf "${mac_url}" | sha256sum)"
