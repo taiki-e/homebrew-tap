@@ -7,13 +7,17 @@ class CargoLlvmCov < Formula
   license any_of: ["Apache-2.0", "MIT"]
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.1.7/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-    sha256 "61d36ffa6e06b77774c9deb57196ea9f53620176cb2597e019e8bccddd58f460"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.1.7/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "61d36ffa6e06b77774c9deb57196ea9f53620176cb2597e019e8bccddd58f460"
+    end
   end
-  if OS.linux?
-    url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.1.7/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "3d8d830e0a19b2e9229fff690dc803d1d442dcf4831b52294bb02bde0dce2e3f"
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.1.7/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "3d8d830e0a19b2e9229fff690dc803d1d442dcf4831b52294bb02bde0dce2e3f"
+    end
   end
 
   def install

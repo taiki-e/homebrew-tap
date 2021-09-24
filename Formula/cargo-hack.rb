@@ -7,13 +7,17 @@ class CargoHack < Formula
   license any_of: ["Apache-2.0", "MIT"]
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.7/cargo-hack-x86_64-apple-darwin.tar.gz"
-    sha256 "7ac464b8a3c147949474c49cc89782ecfde2098f42259a59c673579663c8cc55"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.7/cargo-hack-x86_64-apple-darwin.tar.gz"
+      sha256 "7ac464b8a3c147949474c49cc89782ecfde2098f42259a59c673579663c8cc55"
+    end
   end
-  if OS.linux?
-    url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.7/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "7235b068f65e8d4c14787aa3695984e3fbbcbd7f0c97537872e3c8391eca1db1"
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.7/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "7235b068f65e8d4c14787aa3695984e3fbbcbd7f0c97537872e3c8391eca1db1"
+    end
   end
 
   def install

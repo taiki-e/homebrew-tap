@@ -7,13 +7,17 @@ class ParseChangelog < Formula
   license any_of: ["Apache-2.0", "MIT"]
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.3/parse-changelog-x86_64-apple-darwin.tar.gz"
-    sha256 "7f717140cc8cc8531e443195f5ae1913d3ab01033d3538f7394622c561c5c470"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.3/parse-changelog-x86_64-apple-darwin.tar.gz"
+      sha256 "7f717140cc8cc8531e443195f5ae1913d3ab01033d3538f7394622c561c5c470"
+    end
   end
-  if OS.linux?
-    url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.3/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "f4120023ad79b68e3287e775c4e55773db8a298e7c995fde67c99c31ab1d38c6"
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.3/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f4120023ad79b68e3287e775c4e55773db8a298e7c995fde67c99c31ab1d38c6"
+    end
   end
 
   def install
