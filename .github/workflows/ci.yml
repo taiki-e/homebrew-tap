@@ -37,3 +37,11 @@ jobs:
           persist-credentials: false
       - run: tools/formula.sh
       - run: git diff --exit-code
+
+  tidy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - run: shellcheck **/*.sh
