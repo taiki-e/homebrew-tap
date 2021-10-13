@@ -3,20 +3,20 @@
 class CargoHack < Formula
   desc "Cargo subcommand for testing and continuous integration"
   homepage "https://github.com/taiki-e/cargo-hack"
-  version "0.5.7"
+  version "0.5.8"
   license any_of: ["Apache-2.0", "MIT"]
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.7/cargo-hack-x86_64-apple-darwin.tar.gz"
-      sha256 "7ac464b8a3c147949474c49cc89782ecfde2098f42259a59c673579663c8cc55"
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.8/cargo-hack-x86_64-apple-darwin.tar.gz"
+      sha256 "5351954f5e8cf65497e9240735a8bcfd69067e2e94a26f4be41d16e98fc54965"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.7/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "7235b068f65e8d4c14787aa3695984e3fbbcbd7f0c97537872e3c8391eca1db1"
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.8/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "9ad5d16806deaf4255cd559c2c5411c09383d7c408ef4c8a4e491d0d416f8881"
     end
   end
 
