@@ -5,7 +5,6 @@ class CargoLlvmCov < Formula
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
   version "0.1.9"
   license any_of: ["Apache-2.0", "MIT"]
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

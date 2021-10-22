@@ -5,7 +5,6 @@ class CargoHack < Formula
   homepage "https://github.com/taiki-e/cargo-hack"
   version "0.5.8"
   license any_of: ["Apache-2.0", "MIT"]
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
