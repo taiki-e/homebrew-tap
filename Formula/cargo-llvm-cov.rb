@@ -3,19 +3,19 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-Z instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.1.9"
+  version "0.1.10"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.1.9/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "f2b4bd40ced4962aa72e5429c29421017ea466765f316e6923912c6ea1a63802"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.1.10/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "2222389b0600eaf62b0e9403acc7b00233d55ec0ad78f0689dc9557b94aacd94"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.1.9/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "8b0b825f26415f2b8998c99660f543f8ade9bc0421258beebc6328efbd6b4dd7"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.1.10/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "b72463f53eeea3e4eea82772a77d9f9e3918e2155c341fa87a043f21daeebeb5"
     end
   end
 
