@@ -1,12 +1,11 @@
 #!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
 
 # Update formulas.
 #
-# Usage:
+# USAGE:
 #    ./tools/formula.sh
-
-set -euo pipefail
-IFS=$'\n\t'
 
 OWNER="taiki-e"
 PACKAGES=(

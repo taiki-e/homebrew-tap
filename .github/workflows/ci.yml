@@ -9,7 +9,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '40 1 * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
           persist-credentials: false
       - run: brew install --verbose Formula/*.rb
       - run: brew test --verbose Formula/*.rb
-      - run: brew audit --strict Formula/*.rb
+      - run: tools/audit.sh
 
   formula:
     runs-on: ubuntu-18.04
