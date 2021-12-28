@@ -30,24 +30,18 @@ if type -P npm &>/dev/null && type -P "$(npm bin)/prettier" &>/dev/null; then
     prettier="$(npm bin)/prettier"
 fi
 
-if [[ -z "${CI:-}" ]]; then
-    if type -P shfmt &>/dev/null; then
-        shfmt -l -w $(git ls-files '*.sh')
-    else
-        echo >&2 "WARNING: 'shfmt' is not installed"
-    fi
-    if type -P "${prettier}" &>/dev/null; then
-        "${prettier}" -l -w $(git ls-files '*.yml')
-    else
-        echo >&2 "WARNING: 'prettier' is not installed"
-    fi
-    if type -P shellcheck &>/dev/null; then
-        shellcheck $(git ls-files '*.sh')
-    else
-        echo >&2 "WARNING: 'shellcheck' is not installed"
-    fi
+if type -P shfmt &>/dev/null; then
+    shfmt -l -w $(git ls-files '*.sh')
 else
-    shfmt -d $(git ls-files '*.sh')
-    "${prettier}" -c $(git ls-files '*.yml')
+    echo >&2 "WARNING: 'shfmt' is not installed"
+fi
+if type -P "${prettier}" &>/dev/null; then
+    "${prettier}" -l -w $(git ls-files '*.yml')
+else
+    echo >&2 "WARNING: 'prettier' is not installed"
+fi
+if type -P shellcheck &>/dev/null; then
     shellcheck $(git ls-files '*.sh')
+else
+    echo >&2 "WARNING: 'shellcheck' is not installed"
 fi
