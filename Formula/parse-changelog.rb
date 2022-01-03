@@ -3,19 +3,19 @@
 class ParseChangelog < Formula
   desc "Simple changelog parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-changelog"
-  version "0.4.5"
+  version "0.4.6"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.5/parse-changelog-x86_64-apple-darwin.tar.gz"
-      sha256 "4c9cfa68728db25c7cb81664be53125accad3a38b2c155efb2dc8fa9ca23b643"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.6/parse-changelog-x86_64-apple-darwin.tar.gz"
+      sha256 "b76556015fc0346b28322869cf13fc637e1258d3e97416228da46135423d63cd"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.5/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "0da8fab497c50ee139e6595649fa532d18d37e0db72ef7974f38671ac4449432"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.6/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "976d47ff81eafeda2d8d7bd4ed7bb13e466c46fe701e6ad9e6386ee615ea65a6"
     end
   end
 
