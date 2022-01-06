@@ -3,19 +3,19 @@
 class CargoHack < Formula
   desc "Cargo subcommand for testing and continuous integration"
   homepage "https://github.com/taiki-e/cargo-hack"
-  version "0.5.9"
+  version "0.5.10"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.9/cargo-hack-x86_64-apple-darwin.tar.gz"
-      sha256 "38edacefb163c8f6b701c31a984fa6b1053747faf988354a7a0e2ef200618701"
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.10/cargo-hack-x86_64-apple-darwin.tar.gz"
+      sha256 "c1459c80d2dfac359189e4ea1f97da9a2576a09a9315f7db751b419239568820"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.9/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "98f4010e94700ad342be575156b642be6669afc04ae62eec438d06bd1dd87b4d"
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.10/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "06e413c02196e3b5affe363d89c538bc947b24d4dc9678acfd5bc91d94e06868"
     end
   end
 
