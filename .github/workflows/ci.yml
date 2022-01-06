@@ -32,16 +32,19 @@ jobs:
 
   formula:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # TODO test
+      pull-requests: write
     steps:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
       - run: tools/formula.sh
-      - run: git add -N . && git diff --exit-code
-        if: github.event_name != 'schedule'
+      # - run: git add -N . && git diff --exit-code
+      #   if: github.event_name != 'schedule'
       - id: diff
         run: ci/formula.sh
-        if: github.event_name == 'schedule'
+        # if: github.event_name == 'schedule'
       - uses: taiki-e/create-pull-request@v3
         with:
           title: Update formula
@@ -52,7 +55,7 @@ jobs:
             [1]: https://github.com/peter-evans/create-pull-request
             [2]: https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#workarounds-to-trigger-further-workflow-runs
           branch: formula
-        if: github.event_name == 'schedule' && steps.diff.outputs.success == 'false'
+        if: steps.diff.outputs.success == 'false'
 
   tidy:
     runs-on: ubuntu-latest
