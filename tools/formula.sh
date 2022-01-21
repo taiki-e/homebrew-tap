@@ -34,10 +34,12 @@ for i in "${!PACKAGES[@]}"; do
     class=$(sed -r 's/(^|-)(\w)/\U\2/g' <<<"${package}")
     set -x
     tag=$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "https://api.github.com/repos/${OWNER}/${package}/releases/latest" | jq -r '.tag_name')
-    mac_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
-    linux_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
-    mac_sha="$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "${mac_url}" | sha256sum)"
-    linux_sha="$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "${linux_url}" | sha256sum)"
+    aarch64_linux_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-aarch64-unknown-linux-musl.tar.gz"
+    x86_64_linux_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
+    x86_64_mac_url="https://github.com/${OWNER}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
+    aarch64_linux_sha="$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "${aarch64_linux_url}" | sha256sum)"
+    x86_64_linux_sha="$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "${x86_64_linux_url}" | sha256sum)"
+    x86_64_mac_sha="$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "${x86_64_mac_url}" | sha256sum)"
     set +x
 
     cat >./Formula/"${package}".rb <<EOF
@@ -51,14 +53,17 @@ class ${class} < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "${mac_url}"
-      sha256 "${mac_sha%  *}"
+      url "${x86_64_mac_url}"
+      sha256 "${x86_64_mac_sha%  *}"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "${linux_url}"
-      sha256 "${linux_sha%  *}"
+      url "${x86_64_linux_url}"
+      sha256 "${x86_64_linux_sha%  *}"
+    elsif Hardware::CPU.arm?
+      url "${aarch64_linux_url}"
+      sha256 "${aarch64_linux_sha%  *}"
     end
   end
 
