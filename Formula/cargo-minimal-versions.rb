@@ -3,19 +3,22 @@
 class CargoMinimalVersions < Formula
   desc "Cargo subcommand for proper use of -Z minimal-versions"
   homepage "https://github.com/taiki-e/cargo-minimal-versions"
-  version "0.1.1"
+  version "0.1.2"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.1/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
-      sha256 "5ad711a27fce8a176a348427b3f009f8d703663395e5fa19032c72e6d8b1d4d7"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.2/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
+      sha256 "cf29e3cd862ad613a96215b884f77c369b94315f7849dbf2727d2efdaed575c5"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.1/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "c80f49034fb8d87869b210535f4d89ad4562ae00da3b97d7a30eae3e17350ae6"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.2/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "d42cf0af9ca7c449dbad815b450cfbee478c263dbaa3952399e72090d85c4798"
+    elsif Hardware::CPU.arm?
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.2/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "0c85913f75f8e74737de76516d84e1409ca3433775b2ed73d29f97905be59b93"
     end
   end
 
