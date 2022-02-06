@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 IFS=$'\n\t'
+cd "$(dirname "$0")"/..
 
 # Update formulas.
 #
@@ -26,8 +27,6 @@ TESTS=(
     'system "#{bin}/cargo-minimal-versions", "minimal-versions", "--version"'
     'system "#{bin}/parse-changelog", "--version"'
 )
-
-cd "$(cd "$(dirname "$0")" && pwd)"/..
 
 for i in "${!PACKAGES[@]}"; do
     package="${PACKAGES[${i}]}"

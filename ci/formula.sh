@@ -1,8 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
 IFS=$'\n\t'
-
-cd "$(cd "$(dirname "$0")" && pwd)"/..
+cd "$(dirname "$0")"/..
 
 git config user.name "Taiki Endo"
 git config user.email "te316e89@gmail.com"
