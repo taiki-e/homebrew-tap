@@ -23,7 +23,7 @@ jobs:
           - macos-10.15
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           persist-credentials: false
       - run: brew install --verbose Formula/*.rb
@@ -36,7 +36,7 @@ jobs:
       contents: write # TODO test
       pull-requests: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           persist-credentials: false
       - run: tools/formula.sh
@@ -60,7 +60,7 @@ jobs:
   tidy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           persist-credentials: false
       - uses: taiki-e/install-action@shellcheck
