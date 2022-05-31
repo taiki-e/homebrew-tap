@@ -72,3 +72,17 @@ jobs:
         if: always()
       - run: shellcheck $(git ls-files '*.sh')
         if: always()
+
+  # ALL THE PREVIOUS JOBS NEEDS TO BE ADDED TO THE `needs` SECTION OF THIS JOB!
+
+  ci-success:
+    name: ci
+    if: success()
+    needs:
+      - test
+      - formula
+      - tidy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark the job as a success
+        run: exit 0
