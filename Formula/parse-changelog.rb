@@ -3,22 +3,25 @@
 class ParseChangelog < Formula
   desc "Simple changelog parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-changelog"
-  version "0.4.7"
+  version "0.4.8"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.7/parse-changelog-x86_64-apple-darwin.tar.gz"
-      sha256 "d760dc945f491e37248d8446e8d373377e32bb1c1186e38be783c76147d91654"
+    if Hardware::CPU.arm?
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.8/parse-changelog-aarch64-apple-darwin.tar.gz"
+      sha256 "6340bb46d3daf9920512e578d5f6fb0e34e5a26e71845bc93797b87445584191"
+    else
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.8/parse-changelog-x86_64-apple-darwin.tar.gz"
+      sha256 "88c591fdf537064c64fde8f916065afacd845a5929c949aa6b4cd4b38a81437b"
     end
   end
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.7/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "b9869865ea79e3bf4931cca16a82f7226c84ffca9b508d2279b626e1c63e5151"
-    elsif Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.7/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "f4b1e860561adce28cbbf1ddebd6464830addf4157a6b4ea5dbfbd199c788cbf"
+    if Hardware::CPU.arm?
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.8/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "9756134014b0d24c300b54da03d554cdac710f3c2ba48beeb4031a151f3a2479"
+    else
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.4.8/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "41bc030a00e13a83faf6021b7be3ab50af7479f5c6ca6ca0a00ae29a0d71bcc8"
     end
   end
 

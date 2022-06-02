@@ -3,22 +3,25 @@
 class CargoMinimalVersions < Formula
   desc "Cargo subcommand for proper use of -Z minimal-versions"
   homepage "https://github.com/taiki-e/cargo-minimal-versions"
-  version "0.1.3"
+  version "0.1.4"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.3/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
-      sha256 "650cfd6875635509723958c98f9864e5072cdbf7e4305fbeff603010e8fab503"
+    if Hardware::CPU.arm?
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.4/cargo-minimal-versions-aarch64-apple-darwin.tar.gz"
+      sha256 "ab4bae13d263f7eb7bdf02a931daeab26c16fa5a8585de931a3a6f96fb0a86cc"
+    else
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.4/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
+      sha256 "081e23fb403d7cc6b6307fb056c247f5edcb19539558a865ef593802e0e41758"
     end
   end
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.3/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "89fd8fa3a37d76568122cbce3ba6a4bd7600a1b893be0eef59e8733887758264"
-    elsif Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.3/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "e5cf61743a666a30a66025cd49a8336c4dd2e07605aa5f51bad81b10d7357042"
+    if Hardware::CPU.arm?
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.4/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "349f07e51fa733f6b1ae890a6d761f7af53f5679eb74675a7aa1673710bae5b6"
+    else
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.4/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "739944284263057f8f6a3854e67e66d3d02ed435cc9af9dcc638dc8c09a55d3b"
     end
   end
 
