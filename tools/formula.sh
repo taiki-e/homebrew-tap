@@ -17,7 +17,7 @@ PACKAGES=(
 )
 DESCRIPTIONS=(
     "Cargo subcommand for testing and continuous integration"
-    "Cargo subcommand for LLVM source-based code coverage (-Z instrument-coverage)"
+    "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
     "Cargo subcommand for proper use of -Z minimal-versions"
     "Simple changelog parser, written in Rust"
 )
