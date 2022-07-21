@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.4.10"
+  version "0.4.11"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.10/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "1c224719fcbf3abe06777b41a81d05972d11a5ef95561f509a9a05d2f3d44559"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.11/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "b814227443433b39369dfbb572b776ac900b3cd9a914c5060964b4f324478f37"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.10/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "7ad3d75c23ca34bfc43352bdf2efcda0cbd4e51d34418cf0656c41132eac6877"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.11/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "cef7ced7393460a9ef0eb076c900a6a7bba1ec2da56838723ff9fd5e4cdb21e6"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.10/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "3a5422ae1cc10672f421bb72d5a613af85e17f89270ab4809da0609b4f598bc9"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.11/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "642b6b82c921defc5c25bbaa56de76f35ef101698bbb766bf1cbca64e49ab947"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.10/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "a5106d477a994b8afd40e7ebb85317b5960c19c31d548a244c46b50b3c7c3e41"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.11/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "ce328017159b3120733bb3a3760ec27277c0234837f72ffba4abca054eed19cc"
     end
   end
 
