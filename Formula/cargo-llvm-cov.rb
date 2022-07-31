@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.4.11"
+  version "0.4.12"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.11/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "b814227443433b39369dfbb572b776ac900b3cd9a914c5060964b4f324478f37"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.12/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "8c3877b8619ed244f565ee6f7985c966adec498d7bf51ca1a5d5f7c6f322c93e"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.11/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "cef7ced7393460a9ef0eb076c900a6a7bba1ec2da56838723ff9fd5e4cdb21e6"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.12/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "286596f70a983344253538ef82015446acf55e55d12c322c4b707e5eeaaa891c"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.11/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "642b6b82c921defc5c25bbaa56de76f35ef101698bbb766bf1cbca64e49ab947"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.12/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "9dfcc26a1202dd7ecc0cd3ca6a5a7e2ba08d4a53e090b5be0a7b11cef2931b07"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.11/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "ce328017159b3120733bb3a3760ec27277c0234837f72ffba4abca054eed19cc"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.12/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "810235170247ebeb63bfe8707d16db6dd99bcaa368b38020f656c9a5d7881b68"
     end
   end
 
