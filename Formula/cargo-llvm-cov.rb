@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.4.13"
+  version "0.4.14"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.13/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "51def92f0d399f0473a89e03796f908f463d6e459a19a7c1d1f76854e66d49c7"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.14/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "f9635fd760622e4b1cfd9ac8b8c65f6a38ba4b3d40c939e622369af191b3bdd3"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.13/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "d0d8716f11676536aff573d9355f15c9471336452dbf5f89f5704db6cb4379e9"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.14/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "cd7410d82346f478203e2d4c60265e89ef83d7a5d5eba5ae10d5edf8e8f93844"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.13/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "5d091e43f088b00261fd7c8725bc70367d3bd951349ecdc3352e302d38224161"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.14/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "8341e9ba276c9819d0b59c9fb8bc9419ffe76ce0906a46a554fd09ad21842caa"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.13/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "44e7e84da6d533d2975ff3c448cb27d429728e629ae896691364b0c4a9726ba9"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.4.14/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "c5d08670b667c7c34fe3ac8580e3c1ee1dd2b554db1f1ee476ef7f7114df103d"
     end
   end
 
