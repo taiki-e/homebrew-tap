@@ -28,8 +28,7 @@ jobs:
           persist-credentials: false
       - run: brew install --verbose Formula/*.rb
       - run: brew test --verbose Formula/*.rb
-      - run: tools/audit.sh
-        if: startsWith(matrix.os, 'macos') # disable on Linux due to an upstream bug
+      # - run: tools/audit.sh # disable due to an upstream bug
 
   formula:
     runs-on: ubuntu-latest
