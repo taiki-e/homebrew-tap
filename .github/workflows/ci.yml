@@ -26,6 +26,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           persist-credentials: false
+      # https://github.com/actions/runner-images/issues/6283
+      - run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
+        if: startsWith(matrix.os, 'ubuntu')
       - run: brew install --verbose Formula/*.rb
       - run: brew test --verbose Formula/*.rb
       # - run: tools/audit.sh # disable due to an upstream bug
