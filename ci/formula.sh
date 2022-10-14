@@ -18,5 +18,5 @@ for formula in Formula/*.rb; do
 done
 
 if [[ -n "${has_update:-}" ]]; then
-    echo "::set-output name=success::false"
+    echo "success=false" >>"${GITHUB_OUTPUT}"
 fi
