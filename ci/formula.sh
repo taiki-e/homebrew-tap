@@ -17,6 +17,6 @@ for formula in Formula/*.rb; do
     fi
 done
 
-if [[ -n "${has_update:-}" ]]; then
+if [[ -n "${has_update:-}" ]] && [[ -n "${GITHUB_OUTPUT:-}" ]]; then
     echo "success=false" >>"${GITHUB_OUTPUT}"
 fi
