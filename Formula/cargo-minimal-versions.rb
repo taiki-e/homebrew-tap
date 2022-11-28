@@ -3,25 +3,25 @@
 class CargoMinimalVersions < Formula
   desc "Cargo subcommand for proper use of -Z minimal-versions"
   homepage "https://github.com/taiki-e/cargo-minimal-versions"
-  version "0.1.7"
+  version "0.1.8"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.7/cargo-minimal-versions-aarch64-apple-darwin.tar.gz"
-      sha256 "2528ec81f067623e2cc173ea9c4e2a53c9243d50f931bf516354d27b23d9d195"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.8/cargo-minimal-versions-aarch64-apple-darwin.tar.gz"
+      sha256 "04e41c7fcdaaa724ad7da63237a815d88b9a057800cf1148970d213b08b28abf"
     else
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.7/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
-      sha256 "9203cf870c29a63cffb204f0663e29a31d50c6955b32bd9d43d0519a971cda99"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.8/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
+      sha256 "d363a13641f5be0fe6b23b12673956a7b766c085f3a7f0f6c8e36a2c456251bb"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.7/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "7604fab05ce523ad326d6b158d028035161a18533118a06c6035242439bdf7dc"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.8/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "9b0a03f84acd3bf70e63f8fb613917b60af80fc20d98bd67d19e23f2aaa88515"
     else
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.7/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "70f3a766a785b905b975d988e0acbc7a0685feef91bf05d164d27349e4ad14e2"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.8/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "0aa5c502202831dae2ea3c327788e95c9077ae914879dc2f78d66c6b2d4be12e"
     end
   end
 
