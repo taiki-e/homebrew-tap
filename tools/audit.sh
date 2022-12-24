@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euxo pipefail
+set -euo pipefail
 IFS=$'\n\t'
 
 # shellcheck disable=SC2154
@@ -9,6 +9,8 @@ trap 's=$?; echo >&2 "$0: Error on line "${LINENO}": ${BASH_COMMAND}"; exit ${s}
 #
 # USAGE:
 #    ./tools/audit.sh
+
+set -x
 
 tap_name=taiki-e/test
 brew tap-new --no-git "${tap_name}"
