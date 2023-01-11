@@ -16,18 +16,21 @@ packages=(
     "cargo-hack"             # https://github.com/taiki-e/cargo-hack
     "cargo-llvm-cov"         # https://github.com/taiki-e/cargo-llvm-cov
     "cargo-minimal-versions" # https://github.com/taiki-e/cargo-minimal-versions
+    "cargo-no-dev-deps"      # https://github.com/taiki-e/cargo-no-dev-deps
     "parse-changelog"        # https://github.com/taiki-e/parse-changelog
 )
 descriptions=(
     "Cargo subcommand for testing and continuous integration"
     "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
     "Cargo subcommand for proper use of -Z minimal-versions"
+    "Cargo subcommand for running cargo without dev-dependencies"
     "Simple changelog parser, written in Rust"
 )
 tests=(
     'system "#{bin}/cargo-hack", "hack", "--version"'
     'system "#{bin}/cargo-llvm-cov", "llvm-cov", "--version"'
     'system "#{bin}/cargo-minimal-versions", "minimal-versions", "--version"'
+    'system "#{bin}/cargo-no-dev-deps", "no-dev-deps", "--version"'
     'system "#{bin}/parse-changelog", "--version"'
 )
 
