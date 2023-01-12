@@ -3,25 +3,25 @@
 class CargoMinimalVersions < Formula
   desc "Cargo subcommand for proper use of -Z minimal-versions"
   homepage "https://github.com/taiki-e/cargo-minimal-versions"
-  version "0.1.9"
+  version "0.1.10"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.9/cargo-minimal-versions-aarch64-apple-darwin.tar.gz"
-      sha256 "307a0efc447d3dd22d9286ecafecdb4ce7241dee3e52c4f10ac6f5f9f495a6fa"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.10/cargo-minimal-versions-aarch64-apple-darwin.tar.gz"
+      sha256 "f1c872f93d526bb9988c6b96eed66a4f5d6ee11170d9b3952e3ffbb441f94d69"
     else
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.9/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
-      sha256 "b34bfd059a4f7646b6f18861c8684d1ead30962ae8858369f16d74c8457542bb"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.10/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
+      sha256 "0092d3f009db6e8af40db25ca078b151cc64556eebbc4afa506f81b17d054680"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.9/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "8ca629b9c9fe97caad187e5595baf1afbdf3f584b3901c6add289d8c939549b7"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.10/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "60b5fc7500415937a29c5d80d2d7772b87583f9716b685d840cd502b2c456a63"
     else
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.9/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "4ad1c41f00a8258c9c64f713fcb48bab23617273d9363146acdfc4a803ee711c"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.10/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "de28bdc0a9ff95ce607eea9b090525dc967138029f31a0c5173143e3dbe080d3"
     end
   end
 
