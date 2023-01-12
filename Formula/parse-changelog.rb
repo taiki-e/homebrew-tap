@@ -3,25 +3,25 @@
 class ParseChangelog < Formula
   desc "Simple changelog parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-changelog"
-  version "0.5.2"
+  version "0.5.3"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.5.2/parse-changelog-aarch64-apple-darwin.tar.gz"
-      sha256 "ea4029f555127d082e4f4873ae1382f32b1d0afdaac6952eb346c5ae82c55fee"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.5.3/parse-changelog-aarch64-apple-darwin.tar.gz"
+      sha256 "ceca49aff58a2ebd6cef9c54684c8311e71012ef2d9eb6b69524635ce13df0bc"
     else
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.5.2/parse-changelog-x86_64-apple-darwin.tar.gz"
-      sha256 "3f0df01fe56c3e93747a252c4fa00cd40af53238747c5532665dc5ffea2e0016"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.5.3/parse-changelog-x86_64-apple-darwin.tar.gz"
+      sha256 "9ab883043949d6b2080720dd88575774cb09bb8c97cacf8e8db06b46f91bc4a3"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.5.2/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "41f4adb16160f2d31df32aebaae4a4966af9d8136b092f0e94d1788ff1c84866"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.5.3/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "d887eab1fd39ac54202058595efda8e4ef28d30697aea5b1d901e0922682db64"
     else
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.5.2/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "bcaa72cf77aac0b897a8f6380106acb44b1dd28e53feefdd8f91bb4becbf355f"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.5.3/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "7ec427621565a6bb67d7e46397471b374435bc4622339595afa42d74d2f2a2cf"
     end
   end
 
