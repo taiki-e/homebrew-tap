@@ -25,6 +25,7 @@ jobs:
           - ubuntu-20.04
           - macos-11
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v3
         with:
@@ -38,6 +39,7 @@ jobs:
 
   formula:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
       contents: write # TODO test
       pull-requests: write
