@@ -34,20 +34,47 @@ tests=(
     'system "#{bin}/parse-changelog", "--version"'
 )
 
+retry() {
+    for i in {1..10}; do
+        if "$@"; then
+            return 0
+        else
+            sleep "${i}"
+        fi
+    done
+    "$@"
+}
+info() {
+    echo "info: $*"
+}
+run_curl() {
+    if [[ -n "${GITHUB_TOKEN:-}" ]]; then
+        retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
+            -H "Authorization: token ${GITHUB_TOKEN}" \
+            "$@"
+    else
+        retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
+            "$@"
+    fi
+}
+
 for i in "${!packages[@]}"; do
     package="${packages[${i}]}"
     class=$(sed -r 's/(^|-)(\w)/\U\2/g' <<<"${package}")
-    set -x
-    tag=$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "https://api.github.com/repos/${owner}/${package}/releases/latest" | jq -r '.tag_name')
+    info "fetching latest version of ${package}"
+    tag=$(run_curl "https://api.github.com/repos/${owner}/${package}/releases/latest" | jq -r '.tag_name')
     aarch64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-aarch64-unknown-linux-musl.tar.gz"
     aarch64_mac_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-aarch64-apple-darwin.tar.gz"
     x86_64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
     x86_64_mac_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
-    aarch64_linux_sha="$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "${aarch64_linux_url}" | sha256sum)"
-    aarch64_mac_sha="$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "${aarch64_mac_url}" | sha256sum)"
-    x86_64_linux_sha="$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "${x86_64_linux_url}" | sha256sum)"
-    x86_64_mac_sha="$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused "${x86_64_mac_url}" | sha256sum)"
-    set +x
+    info "downloading ${aarch64_linux_url} for checksum"
+    aarch64_linux_sha="$(run_curl "${aarch64_linux_url}" | sha256sum)"
+    info "downloading ${aarch64_mac_url} for checksum"
+    aarch64_mac_sha="$(run_curl "${aarch64_mac_url}" | sha256sum)"
+    info "downloading ${x86_64_linux_url} for checksum"
+    x86_64_linux_sha="$(run_curl "${x86_64_linux_url}" | sha256sum)"
+    info "downloading ${x86_64_mac_url} for checksum"
+    x86_64_mac_sha="$(run_curl "${x86_64_mac_url}" | sha256sum)"
 
     # refs: https://rubydoc.brew.sh/Hardware/CPU.html
     cat >./Formula/"${package}".rb <<EOF
