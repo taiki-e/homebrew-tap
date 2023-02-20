@@ -89,19 +89,19 @@ class ${class} < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "${aarch64_mac_url}"
-      sha256 "${aarch64_mac_sha%  *}"
+      sha256 "${aarch64_mac_sha%% *}"
     else
       url "${x86_64_mac_url}"
-      sha256 "${x86_64_mac_sha%  *}"
+      sha256 "${x86_64_mac_sha%% *}"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
       url "${aarch64_linux_url}"
-      sha256 "${aarch64_linux_sha%  *}"
+      sha256 "${aarch64_linux_sha%% *}"
     else
       url "${x86_64_linux_url}"
-      sha256 "${x86_64_linux_sha%  *}"
+      sha256 "${x86_64_linux_sha%% *}"
     end
   end
 
