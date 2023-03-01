@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.10"
+  version "0.5.11"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.10/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "3935ac3f3e4af883f698d5e41dae9b3d248ce0a606b0520b739d5e967d78a10e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.11/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "276d8fa70299ec9ae014cab905cdbd614d6bddfa6abcc414492091585dd55ab5"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.10/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "a0924478bfd7a62711d8e9186470dfbb2a00ed22dba704bcd98f65dc41fd5ec7"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.11/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "fe0e54836a367697a1b475440af2e7438e56caf6e548b88faa88edc221a515f7"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.10/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "c395bb8834c779b1bb5a2e0d8302eeec1ef389ee980b47b21f4573181c769786"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.11/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "479f51fac713151f73ee0ab5d7cb1155646cde17903dfd7c526cd51253e99a4c"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.10/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "6ff31ac54aacc133c8d462c99b353dc31924aa9d0bc088ffdd8caa8cc7a14be4"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.11/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "3bd355e29b8e29d0b42f0c95ec487cd8e00ffa419ba65b83968740a641a46c1e"
     end
   end
 
