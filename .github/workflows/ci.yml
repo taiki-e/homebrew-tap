@@ -31,7 +31,7 @@ jobs:
         with:
           persist-credentials: false
       # https://github.com/actions/runner-images/issues/6283
-      - run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
+      - run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> "${GITHUB_PATH}"
         if: startsWith(matrix.os, 'ubuntu')
       - run: brew install --verbose Formula/*.rb
       - run: brew test --verbose Formula/*.rb
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
-      contents: write # TODO test
+      contents: write
       pull-requests: write
     steps:
       - uses: actions/checkout@v3
