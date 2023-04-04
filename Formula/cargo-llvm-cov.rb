@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.12"
+  version "0.5.13"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.12/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "05c8f8e2210a3218b167dce33477785a0bc0c718fac7b15d2f4a428791234f03"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.13/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "b9bb4d03065c4d7e52ed4148d71d36a4c890dee37108addfa9ba19771e46fa1d"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.12/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "77faedad91c300b51d2d40040a6c61903a555da319047983ec56c81598cbea9b"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.13/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "f694bcaf714f352b76182b0aeec9626ca5280ceca275f949caa762a561030350"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.12/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "87c54166055d2d486620ceb27440442d34d71b364fdd6f6da57a210ae5f75e33"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.13/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "d9173b2aae99f29276cd7d84ffdea9eb29f8831acd3f9d9de1c2af4366d917df"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.12/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "998b1d9e630295459743fe7051a7e3d04e82836456171493eb5983dde710b07e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.13/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "e57875cba95527149d15d7f9c66b9d624d8154040f19aedbca96e2c6b7687ffb"
     end
   end
 
