@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.13"
+  version "0.5.14"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.13/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "b9bb4d03065c4d7e52ed4148d71d36a4c890dee37108addfa9ba19771e46fa1d"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.14/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "f98c5d4bc2f7b67328a82028bb78f0a67436ae81a4e2a7911fd4f18f572c434b"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.13/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "f694bcaf714f352b76182b0aeec9626ca5280ceca275f949caa762a561030350"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.14/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "8d4a93175d5ba0710a46ccab007444cea4c53406b4c0b6c6ae6916d1192ac333"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.13/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "d9173b2aae99f29276cd7d84ffdea9eb29f8831acd3f9d9de1c2af4366d917df"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.14/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "61b22ff22d95ca6af9c668c780fe2a23a519a44d1fab3de01adadfbb36cea54d"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.13/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "e57875cba95527149d15d7f9c66b9d624d8154040f19aedbca96e2c6b7687ffb"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.14/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "688e56f78611f7866842f5b86e27672225b28c8a536c75d6c0a3fd67082474ea"
     end
   end
 
