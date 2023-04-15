@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.14"
+  version "0.5.15"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.14/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "f98c5d4bc2f7b67328a82028bb78f0a67436ae81a4e2a7911fd4f18f572c434b"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.15/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "6286e6e73bf505c67b23d47591f6f05e5f5feba809442a6a66d1b7ec3fc8a93b"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.14/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "8d4a93175d5ba0710a46ccab007444cea4c53406b4c0b6c6ae6916d1192ac333"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.15/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "71c6d3010f8d08ab45b23e3459a751d4f8afeaa96f1537815f3cc9f96c4cbef6"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.14/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "61b22ff22d95ca6af9c668c780fe2a23a519a44d1fab3de01adadfbb36cea54d"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.15/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "93cae63fb000fbe327a0f5e8caf6507f9d6c9fdf6775c248968ad977411d8f51"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.14/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "688e56f78611f7866842f5b86e27672225b28c8a536c75d6c0a3fd67082474ea"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.15/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "407b0ddf85e6a39dfe5379761fc1074c7e79f7b518c732072bda1e4fc854d0fb"
     end
   end
 
