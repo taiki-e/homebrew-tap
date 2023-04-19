@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.15"
+  version "0.5.16"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.15/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "6286e6e73bf505c67b23d47591f6f05e5f5feba809442a6a66d1b7ec3fc8a93b"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.16/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "db2780cf7af86b50ae011f49c4a91f2da58115ff47835a96dca134de2bd60c7e"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.15/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "71c6d3010f8d08ab45b23e3459a751d4f8afeaa96f1537815f3cc9f96c4cbef6"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.16/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "67f720d403569e7fa69ed2ed74c90d06658dc713c0f1f60088f12af267db5c6b"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.15/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "93cae63fb000fbe327a0f5e8caf6507f9d6c9fdf6775c248968ad977411d8f51"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.16/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "f1055016db604f346d351d16fdb3ae43d7ab7ebc31e4463b836daa990b17c78f"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.15/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "407b0ddf85e6a39dfe5379761fc1074c7e79f7b518c732072bda1e4fc854d0fb"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.16/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "d7759f9d465907f4a8fa24f10bfa0817863f62c412ffaae7b8dadab370201f9b"
     end
   end
 
