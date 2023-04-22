@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.16"
+  version "0.5.17"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.16/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "db2780cf7af86b50ae011f49c4a91f2da58115ff47835a96dca134de2bd60c7e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.17/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "cb5d1f1c700a7e1069898714e82005417a07d5455ca93fc3278cd0e5340338e5"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.16/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "67f720d403569e7fa69ed2ed74c90d06658dc713c0f1f60088f12af267db5c6b"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.17/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "1f089884ad5c367015971166b8f752717eb70980241ce0125da86f4044547939"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.16/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "f1055016db604f346d351d16fdb3ae43d7ab7ebc31e4463b836daa990b17c78f"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.17/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "83ce55e7df193d86e491e5f911a63e4123e9fe182bfd89eed273d3753208190d"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.16/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "d7759f9d465907f4a8fa24f10bfa0817863f62c412ffaae7b8dadab370201f9b"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.17/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "20b563871c1ac1a83ae5683dc97fa0a1bf15ca16407b3daf751dbf652ecbea95"
     end
   end
 
