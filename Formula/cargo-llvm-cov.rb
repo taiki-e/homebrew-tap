@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.17"
+  version "0.5.18"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.17/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "cb5d1f1c700a7e1069898714e82005417a07d5455ca93fc3278cd0e5340338e5"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.18/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "d766e832e4b01808b0359a0241c14141be010ec2b0e79e19d5e05c0746969c8e"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.17/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "1f089884ad5c367015971166b8f752717eb70980241ce0125da86f4044547939"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.18/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "05621b99740a9499ee5336cec4fff63ea69aa5a731e29574b71d7c54baa849f4"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.17/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "83ce55e7df193d86e491e5f911a63e4123e9fe182bfd89eed273d3753208190d"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.18/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "c63c77048047aa14f43bb5d266e5eceacc510c551fb17c8968b2f8887516bee5"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.17/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "20b563871c1ac1a83ae5683dc97fa0a1bf15ca16407b3daf751dbf652ecbea95"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.18/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "eb5db22d1c4e67913d983145fd8473edad8f84b60b08398b634b275ccf1ae324"
     end
   end
 
