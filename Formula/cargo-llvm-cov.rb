@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.18"
+  version "0.5.19"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.18/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "d766e832e4b01808b0359a0241c14141be010ec2b0e79e19d5e05c0746969c8e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.19/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "fb8aeeb7af828ab0b49462cee13d60f1d7c69d55226ec0fc11c3082004a08513"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.18/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "05621b99740a9499ee5336cec4fff63ea69aa5a731e29574b71d7c54baa849f4"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.19/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "ab5400be7319b519350e535a71e210197c2597d416beca2c839676f2a28804ae"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.18/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "c63c77048047aa14f43bb5d266e5eceacc510c551fb17c8968b2f8887516bee5"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.19/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "6e5f19e65646b2625bb820d00065081d62bd19f6d483054b1b43a152678f13a6"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.18/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "eb5db22d1c4e67913d983145fd8473edad8f84b60b08398b634b275ccf1ae324"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.19/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "79129f4adf9b9dd239a7facd041630a6b29c123a3e0ccabfbce44c71d391fc17"
     end
   end
 
