@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.19"
+  version "0.5.20"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.19/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "fb8aeeb7af828ab0b49462cee13d60f1d7c69d55226ec0fc11c3082004a08513"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.20/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "5ff99c8b17dafc24471d0e498cd68f8c858a6dc613535f7ffa738a12e11b18cf"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.19/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "ab5400be7319b519350e535a71e210197c2597d416beca2c839676f2a28804ae"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.20/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "69eb20beb8a2d2f455bd8be486f92718645fa94c726751698c125f92d11bbc54"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.19/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "6e5f19e65646b2625bb820d00065081d62bd19f6d483054b1b43a152678f13a6"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.20/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "dee687b786492b3402dabda190e9444f4e4f5e412d0e1ce7d541dd1d5d519243"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.19/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "79129f4adf9b9dd239a7facd041630a6b29c123a3e0ccabfbce44c71d391fc17"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.20/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "688aefd7b53917d29b3fa8d81cb449e98138c6b9a6c768eff412f9a523fd3e62"
     end
   end
 
