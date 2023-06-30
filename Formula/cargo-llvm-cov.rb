@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.20"
+  version "0.5.22"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.20/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "5ff99c8b17dafc24471d0e498cd68f8c858a6dc613535f7ffa738a12e11b18cf"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.22/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "c2b702c10a033edee94fbff3b62d0e248932187431fea1b02e652762a0ae2c8d"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.20/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "69eb20beb8a2d2f455bd8be486f92718645fa94c726751698c125f92d11bbc54"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.22/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "9860cd3df6947817b689772d976f03f8b4edddc98a7d000a36d39d286c2ef663"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.20/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "dee687b786492b3402dabda190e9444f4e4f5e412d0e1ce7d541dd1d5d519243"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.22/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "bcf7cf97bbf49932b6cf43554a2ebf7ed9d50a54c16b0b33cd95cbc90e66008c"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.20/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "688aefd7b53917d29b3fa8d81cb449e98138c6b9a6c768eff412f9a523fd3e62"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.22/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "6a3f93f12e93853844dfa8b697ff86aaa688b9f44b82ba75b3f4ddd8905f3de5"
     end
   end
 
