@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.22"
+  version "0.5.23"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.22/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "c2b702c10a033edee94fbff3b62d0e248932187431fea1b02e652762a0ae2c8d"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.23/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "bfc30b8d89cf3b477caa8b4eee89bc083d8a3649e57a88eaa7a3a4948e5eaa0e"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.22/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "9860cd3df6947817b689772d976f03f8b4edddc98a7d000a36d39d286c2ef663"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.23/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "e87ffd34514d23b5ce5d70e62eaff51c8a56308fcfea5d2df1cbf7a4930883af"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.22/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "bcf7cf97bbf49932b6cf43554a2ebf7ed9d50a54c16b0b33cd95cbc90e66008c"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.23/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "5ad1d9b56601b76112c2555289763b88e0aba57b5188c7cb0b7e0c9f17141590"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.22/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "6a3f93f12e93853844dfa8b697ff86aaa688b9f44b82ba75b3f4ddd8905f3de5"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.23/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "cdbb1c34bffeb2b5b986f16e3e1dd08c01d9ef2cbd1cf2d989ae7a184ce91302"
     end
   end
 
