@@ -58,10 +58,8 @@ jobs:
       - run: tools/formula.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: git add -N . && git diff --exit-code
-        if: github.repository_owner != 'taiki-e' || github.event_name != 'schedule' && !(github.event_name == 'push' && github.ref == 'refs/heads/main')
       - id: diff
-        run: ci/formula.sh
+        run: tools/ci/formula.sh
         if: github.repository_owner == 'taiki-e' && (github.event_name == 'schedule' || github.event_name == 'push' && github.ref == 'refs/heads/main')
       - uses: peter-evans/create-pull-request@v5
         with:
@@ -74,3 +72,4 @@ jobs:
             [2]: https://github.com/peter-evans/create-pull-request/blob/HEAD/docs/concepts-guidelines.md#workarounds-to-trigger-further-workflow-runs
           branch: update-formula
         if: github.repository_owner == 'taiki-e' && (github.event_name == 'schedule' || github.event_name == 'push' && github.ref == 'refs/heads/main') && steps.diff.outputs.success == 'false'
+      - run: git add -N . && git diff --exit-code
