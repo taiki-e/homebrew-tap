@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.23"
+  version "0.5.24"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.23/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "bfc30b8d89cf3b477caa8b4eee89bc083d8a3649e57a88eaa7a3a4948e5eaa0e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.24/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "0d90b623b4dfa4fe631aaff13b891096224346ce907f0dbd61ae9276717f1bec"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.23/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "e87ffd34514d23b5ce5d70e62eaff51c8a56308fcfea5d2df1cbf7a4930883af"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.24/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "c12b25c44fd1b1b76ecfff7ca1ed4a29b2ec6f9c707f0d09a8716ea7513a557d"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.23/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "5ad1d9b56601b76112c2555289763b88e0aba57b5188c7cb0b7e0c9f17141590"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.24/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "0f3edd524e10b30c26c6ef7ff069843e89a75441c5f281254c2e65e028ccf29e"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.23/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "cdbb1c34bffeb2b5b986f16e3e1dd08c01d9ef2cbd1cf2d989ae7a184ce91302"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.24/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "e1c15ac5a583eeb4c478eed0222c3a3629aff3c9f151d8bdf7b50704ef9073c6"
     end
   end
 
