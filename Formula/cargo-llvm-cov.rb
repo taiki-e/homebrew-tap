@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.24"
+  version "0.5.25"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.24/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "0d90b623b4dfa4fe631aaff13b891096224346ce907f0dbd61ae9276717f1bec"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.25/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "db6d159acf27ca7d6f148fc5604dd9f2ff39da163f94d9a1c37c3f063dd664fb"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.24/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "c12b25c44fd1b1b76ecfff7ca1ed4a29b2ec6f9c707f0d09a8716ea7513a557d"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.25/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "7af62464a39cc9732567ba2b3213c19afe85b20f0ffd7e70ba56cd7bcc78e661"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.24/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "0f3edd524e10b30c26c6ef7ff069843e89a75441c5f281254c2e65e028ccf29e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.25/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "a16b7950746dd8d764479289ac48cb06ebc156e2a750c595b95589a68342bccb"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.24/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "e1c15ac5a583eeb4c478eed0222c3a3629aff3c9f151d8bdf7b50704ef9073c6"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.25/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "0567e6b651bcb819afcc2cc8f49f18a74c57ffba0aa9a2640b313c5f2568ea1c"
     end
   end
 
