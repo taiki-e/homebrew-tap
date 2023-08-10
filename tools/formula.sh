@@ -69,13 +69,13 @@ for i in "${!packages[@]}"; do
     x86_64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
     x86_64_mac_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
     info "downloading ${aarch64_linux_url} for checksum"
-    aarch64_linux_sha="$(run_curl "${aarch64_linux_url}" | sha256sum)"
+    aarch64_linux_sha=$(run_curl "${aarch64_linux_url}" | sha256sum)
     info "downloading ${aarch64_mac_url} for checksum"
-    aarch64_mac_sha="$(run_curl "${aarch64_mac_url}" | sha256sum)"
+    aarch64_mac_sha=$(run_curl "${aarch64_mac_url}" | sha256sum)
     info "downloading ${x86_64_linux_url} for checksum"
-    x86_64_linux_sha="$(run_curl "${x86_64_linux_url}" | sha256sum)"
+    x86_64_linux_sha=$(run_curl "${x86_64_linux_url}" | sha256sum)
     info "downloading ${x86_64_mac_url} for checksum"
-    x86_64_mac_sha="$(run_curl "${x86_64_mac_url}" | sha256sum)"
+    x86_64_mac_sha=$(run_curl "${x86_64_mac_url}" | sha256sum)
 
     # refs: https://rubydoc.brew.sh/Hardware/CPU.html
     cat >./Formula/"${package}".rb <<EOF

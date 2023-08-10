@@ -19,13 +19,13 @@ cp Formula/*.rb "$(brew --repo "${tap_name}")"/Formula
 
 if [[ -n "${CI:-}" ]]; then
     for formula in Formula/*.rb; do
-        formula="$(basename "${formula%.*}")"
+        formula=$(basename "${formula%.*}")
         brew uninstall "${tap_name}/${formula}"
     done
 fi
 
 for formula in Formula/*.rb; do
-    formula="$(basename "${formula%.*}")"
+    formula=$(basename "${formula%.*}")
     brew audit --strict "${tap_name}/${formula}"
 done
 
