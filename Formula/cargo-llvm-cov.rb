@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.26"
+  version "0.5.27"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.26/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "99864fc0f04d337a9a77fd24b89a6e9325381b5f7fb4542ce5e4a2ad2c12363c"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.27/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "43ad8e2bcd3a394f08c6e1582253ea759b611b0b94774933b7ebcc91a23f82e8"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.26/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "9972f993cab0668ee22c1b1cec6c84b00e810ba56c1479122751dd23a9fd71df"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.27/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "8f86128ef90534f1ccdb033ec05f37447e5861eceacb12871598a9f7b1097a1d"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.26/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "0bc7aec3aa09c638c0bc153170ab1f60802057ce9037c6febd10941e5751dc07"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.27/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "20161f2a1f8322ec98281bd818219a9c9cb4744b2dbe95bf073af29b1e47cc83"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.26/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "9284d4ff91e76a12186670a370ecd481e0ef430f077d5258b7c45560fdce2a1f"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.27/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "74e554fb069ee0410422158d293f91eddf1f126c59801df5474d79c39c6c63af"
     end
   end
 
