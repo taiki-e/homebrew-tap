@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.28"
+  version "0.5.30"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.28/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "035f1d632073d90d4b7986e9392b6659552d83759e154697d6032d2eb5fb7557"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.30/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "58d6295dffafdb920a1096635f9dd5334e5911d3e27cd7bccb0d2d9f99cc86b2"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.28/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "56cc1e4c456b560608edea0871b7d5c0f6b61abe2eab6dcfdf66ef5dc32849c9"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.30/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "9f634e2bed2dff89ec21177daf8abc1d55c1cca07e73d52f70b796f63a7a3d52"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.28/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "a944fb36384a8baf9625c26f5232a82e344be38075be9175d50acf1128c418e3"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.30/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "87718e164f6206fe4b2cf9b600bcafa1b582f22509820147f1060569e1d9217c"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.28/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "2e615725d904a4372f8613b8fc2012f392e22e8ce1190b3ad38a63ef25958f9e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.30/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "6731e8d7767145debb825095ab3ab7b9ab25cf7f5a10d22d17c1ef4566fbf249"
     end
   end
 
