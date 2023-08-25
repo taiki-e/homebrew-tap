@@ -3,25 +3,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.30"
+  version "0.5.31"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.30/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "58d6295dffafdb920a1096635f9dd5334e5911d3e27cd7bccb0d2d9f99cc86b2"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.31/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "9b7e2cb8fbc6694c2a0fd2abb7867108447c39350ca0fd3688a1b991877dff69"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.30/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "9f634e2bed2dff89ec21177daf8abc1d55c1cca07e73d52f70b796f63a7a3d52"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.31/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "9cd643daafc0e868c5c284a68cefb57fbc3bb2a11e8c59e54e738168bc691126"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.30/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "87718e164f6206fe4b2cf9b600bcafa1b582f22509820147f1060569e1d9217c"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.31/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "0261bbfa0bd49964ca3dbd3041ec3fe5b23efd62b51e794bf516cc964af24079"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.30/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "6731e8d7767145debb825095ab3ab7b9ab25cf7f5a10d22d17c1ef4566fbf249"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.31/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f3814f9446f441c8b280ca93ba5aaf211295a6c8363d52e03d7e700808e6692c"
     end
   end
 
