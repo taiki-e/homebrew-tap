@@ -3,25 +3,25 @@
 class CargoHack < Formula
   desc "Cargo subcommand for testing and continuous integration"
   homepage "https://github.com/taiki-e/cargo-hack"
-  version "0.5.29"
+  version "0.6.3"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.29/cargo-hack-aarch64-apple-darwin.tar.gz"
-      sha256 "3a024f71643a0cb137b28c7da9530c417f2c64dfa5f78d5e615b7f7376b43558"
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.6.3/cargo-hack-aarch64-apple-darwin.tar.gz"
+      sha256 "279e5cbbcbbe607ac5c81f204f0ae83a62132476fa1ff53f0d8ec24d879bf7f2"
     else
-      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.29/cargo-hack-x86_64-apple-darwin.tar.gz"
-      sha256 "1388d51e994673f30380f709f3a8bacbc7f2981c3b294f34945b9612977ae6dd"
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.6.3/cargo-hack-x86_64-apple-darwin.tar.gz"
+      sha256 "c144b7912bbc9089c116d7c4610c4fc221705af93d6994c31314663bba47785f"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.29/cargo-hack-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "e8729bd85be2c4efc3c72c8a7c995758f4b531334144cb7376557d44492c102e"
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.6.3/cargo-hack-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "c8ee443bb05cd8551b2d9d93befbe7a8f0994a128bc33125cf97da443077b579"
     else
-      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.5.29/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "97be81fba9a94970d9984ea6a02028d9c6a83d53071456aa7c7cf35b9a150405"
+      url "https://github.com/taiki-e/cargo-hack/releases/download/v0.6.3/cargo-hack-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "b9515accb2c8984841a152f860d6c7c827ab4f91c4e5012d86ef7c44f319bd41"
     end
   end
 
