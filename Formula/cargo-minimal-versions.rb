@@ -3,25 +3,25 @@
 class CargoMinimalVersions < Formula
   desc "Cargo subcommand for proper use of -Z minimal-versions"
   homepage "https://github.com/taiki-e/cargo-minimal-versions"
-  version "0.1.14"
+  version "0.1.16"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.14/cargo-minimal-versions-aarch64-apple-darwin.tar.gz"
-      sha256 "7c737c7ade8f4080d04dacec82b9b94752d3b98fd179a2f51af986fc26d273ba"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.16/cargo-minimal-versions-aarch64-apple-darwin.tar.gz"
+      sha256 "27090dbcb9d3046eadc7add438748fdd0795b5caddb985614f5dbcc791902b27"
     else
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.14/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
-      sha256 "d5121056830331b512e3648f7edca3d86cc84e1621f2d3369d24bef549b2c0f0"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.16/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
+      sha256 "7b81508be9bb73cef8caa8b1b09113eebd1897356aa371246572c4fa6d4b19b9"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.14/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "8915fdcde61536c740b885ce83cd2f38a607bf5d7121d8535e8be43bd820b0d6"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.16/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "c42cba95957e6cea55800658367f59c709205d2888a0728817f15c95c6ed257f"
     else
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.14/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f7284ada48677bef2acb9348a6bfe86705246b57681db178a28634e25c61459d"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.16/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "30dc1bc067c6ac347bd0734a3117c0519e7ae715021d56952be3e207ed918447"
     end
   end
 
