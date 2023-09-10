@@ -3,25 +3,25 @@
 class CargoNoDevDeps < Formula
   desc "Cargo subcommand for running cargo without dev-dependencies"
   homepage "https://github.com/taiki-e/cargo-no-dev-deps"
-  version "0.2.4"
+  version "0.2.5"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.4/cargo-no-dev-deps-aarch64-apple-darwin.tar.gz"
-      sha256 "b181d0ec01a93ba4909a8fefd9d4d533647448046fbae28fc81edd902d0658f1"
+      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.5/cargo-no-dev-deps-aarch64-apple-darwin.tar.gz"
+      sha256 "125813b967068757faf1f9733ef018de0850a5e642e86d436b47b317202244ea"
     else
-      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.4/cargo-no-dev-deps-x86_64-apple-darwin.tar.gz"
-      sha256 "1e3f1feed216477022ed2fcdff2019de896d6d179e432722009f507822028979"
+      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.5/cargo-no-dev-deps-x86_64-apple-darwin.tar.gz"
+      sha256 "82aea3272e74f49f10afd04f8e7451831408b006dc97a6d36b56bb81bfe862ec"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.4/cargo-no-dev-deps-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "f358eb55bff29666df98b8b850f44c1dc47fd4f1c35c3f91bfe7173090afeaaf"
+      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.5/cargo-no-dev-deps-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "049696e69c9a1ed571dc93377e944c37e0c886517bc517a84de03a9591b0e013"
     else
-      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.4/cargo-no-dev-deps-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "5dfabc9d10e6eefb6c4847307c7b757a0c5ff20bbc55ba4c156e8ca941130122"
+      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.5/cargo-no-dev-deps-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "4c609f8d62669a8ecad8a83769e3a3adf5faab94820e69fd73473a37bfd39be4"
     end
   end
 
