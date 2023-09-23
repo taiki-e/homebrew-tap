@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.31"
+  version "0.5.32"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.31/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "9b7e2cb8fbc6694c2a0fd2abb7867108447c39350ca0fd3688a1b991877dff69"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.32/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "7893b26db568ce0c606c0b07cad52659abf2ee488d385581e166fa20924168e5"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.31/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "9cd643daafc0e868c5c284a68cefb57fbc3bb2a11e8c59e54e738168bc691126"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.32/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "d56c7b8d5ea02196b8682d242440a400566583f724dee9c9832a99ed9734fa0e"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.31/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "0261bbfa0bd49964ca3dbd3041ec3fe5b23efd62b51e794bf516cc964af24079"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.32/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "2274d691284e4de55fa0a0fd4e7b5003db21f7c62d72986586a81a169cafd7ee"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.31/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f3814f9446f441c8b280ca93ba5aaf211295a6c8363d52e03d7e700808e6692c"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.32/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "2709f1c132eac8c3e1e98f658e2f8fd79f71f0a72b373491aad9e92df3b6684c"
     end
   end
 
