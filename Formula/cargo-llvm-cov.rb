@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.32"
+  version "0.5.33"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.32/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "7893b26db568ce0c606c0b07cad52659abf2ee488d385581e166fa20924168e5"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.33/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "8bc5722370884500381eae586910b633f2a215cd5b5feed31d67682e90bd8412"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.32/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "d56c7b8d5ea02196b8682d242440a400566583f724dee9c9832a99ed9734fa0e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.33/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "e890a29534e8a10439bd8c8fccd39867d2cb016f82d7b51e615c60caf67491b7"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.32/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "2274d691284e4de55fa0a0fd4e7b5003db21f7c62d72986586a81a169cafd7ee"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.33/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "dd6deacc791de61dc31e45537bf2e7c9c8c652f51e06357d4a700ec7e81188c9"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.32/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "2709f1c132eac8c3e1e98f658e2f8fd79f71f0a72b373491aad9e92df3b6684c"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.33/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "3274fb95c5d7ab7dd37db6b75e77b666c6fc06b0bd0172e7923af95fe77711da"
     end
   end
 
