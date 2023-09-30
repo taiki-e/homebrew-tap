@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   tidy:
-    uses: taiki-e/workflows/.github/workflows/tidy.yml@main
+    uses: taiki-e/github-actions/.github/workflows/tidy.yml@main
 
   test:
     strategy:
@@ -76,13 +76,13 @@ jobs:
           branch: update-formula
           token: ${{ secrets.CREATE_PR_TOKEN }}
         if: github.repository_owner == 'taiki-e' && (github.event_name == 'schedule' || github.event_name == 'push' && github.ref == 'refs/heads/main') && steps.diff.outputs.success == 'false'
-      - name: Enable auto-merge for created PR
+      - name: Enable auto-merge for auto-generated PR
         run: gh pr merge --rebase --auto "${PR_NUMBER:?}"
         env:
           GITHUB_TOKEN: ${{ secrets.CREATE_PR_TOKEN }}
           PR_NUMBER: ${{ steps.create-pull-request.outputs.pull-request-number }}
         if: github.repository_owner == 'taiki-e' && (github.event_name == 'schedule' || github.event_name == 'push' && github.ref == 'refs/heads/main') && steps.diff.outputs.success == 'false' && steps.create-pull-request.outputs.pull-request-operation == 'created'
-      - name: Auto approve for created PR
+      - name: Auto approve for auto-generated PR
         run: gh pr review --approve "${PR_NUMBER:?}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
