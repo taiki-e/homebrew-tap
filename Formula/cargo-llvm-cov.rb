@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.33"
+  version "0.5.34"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.33/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "8bc5722370884500381eae586910b633f2a215cd5b5feed31d67682e90bd8412"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.34/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "81eb3dc6dec49c1eb1a9eb5cbdd40395dbf62541be655c4df3ebb09276a5c0b1"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.33/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "e890a29534e8a10439bd8c8fccd39867d2cb016f82d7b51e615c60caf67491b7"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.34/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "f36ffdc068216d65618bced4213177a22f9fae8539070acdff4b84757940c98f"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.33/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "dd6deacc791de61dc31e45537bf2e7c9c8c652f51e06357d4a700ec7e81188c9"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.34/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "96ea303a801f640a205c3e53bd240ee22c51e02a4feb90ab879882ed9b774247"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.33/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "3274fb95c5d7ab7dd37db6b75e77b666c6fc06b0bd0172e7923af95fe77711da"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.34/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "2d312925ea2178de060b5628c899f44f6a162ce621a87de8c3aa0658573f9641"
     end
   end
 
