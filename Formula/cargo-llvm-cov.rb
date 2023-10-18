@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.34"
+  version "0.5.35"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.34/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "81eb3dc6dec49c1eb1a9eb5cbdd40395dbf62541be655c4df3ebb09276a5c0b1"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.35/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "28525454f2fe26ad8eba301134aeff305348b4e143ebdb62f07f2c93db1eb347"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.34/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "f36ffdc068216d65618bced4213177a22f9fae8539070acdff4b84757940c98f"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.35/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "dca22baa597f337ee78f5418b19bb2367108da77cb430be30febd55901537a2f"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.34/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "96ea303a801f640a205c3e53bd240ee22c51e02a4feb90ab879882ed9b774247"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.35/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "56c69758d6bb493dba53a2ac21343a983d22ca677d9ecfe8a4bb66fd185013e8"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.34/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "2d312925ea2178de060b5628c899f44f6a162ce621a87de8c3aa0658573f9641"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.35/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "21e7d42185f8eae113508ec2b8c3bfdd22c6293bb6b0ccd74ab0bd21153dc3b4"
     end
   end
 
