@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.35"
+  version "0.5.36"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.35/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "28525454f2fe26ad8eba301134aeff305348b4e143ebdb62f07f2c93db1eb347"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.36/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "36f431920be39b719438a0a60a568852e2bcfab79db395caf7f77da304451bda"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.35/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "dca22baa597f337ee78f5418b19bb2367108da77cb430be30febd55901537a2f"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.36/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "bcf604c0eb65818e8a3b7b004f45856ef9ab6f0a1c6621c8f3c029e44050f601"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.35/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "56c69758d6bb493dba53a2ac21343a983d22ca677d9ecfe8a4bb66fd185013e8"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.36/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "3f2e9339d505bb330fcadee6a3a8fdfe69a8490bbdc0858ddc152142be8f0b77"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.35/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "21e7d42185f8eae113508ec2b8c3bfdd22c6293bb6b0ccd74ab0bd21153dc3b4"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.36/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "48083f2df7030ac1f5567d2e4155aac71115bc81432da6a97c35b603f8f9d1ed"
     end
   end
 
