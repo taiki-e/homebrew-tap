@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.36"
+  version "0.5.37"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.36/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "36f431920be39b719438a0a60a568852e2bcfab79db395caf7f77da304451bda"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.37/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "cdea4c173930aef177768c6f1ffb928e578ce46a765df0e7c5ebd69bdceadf4a"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.36/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "bcf604c0eb65818e8a3b7b004f45856ef9ab6f0a1c6621c8f3c029e44050f601"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.37/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "7662cd747762b6d8e131997b153acf4137f6f35fc3929be1f4db2f1ad4df115a"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.36/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "3f2e9339d505bb330fcadee6a3a8fdfe69a8490bbdc0858ddc152142be8f0b77"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.37/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "e1ff7c522dd0df727e8af7e83f726094a621418f33ad0da0d49c66fabe76321e"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.36/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "48083f2df7030ac1f5567d2e4155aac71115bc81432da6a97c35b603f8f9d1ed"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.37/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "3444cd1604eae4e2aaf7ad7be7ebc5be2fc3571000b900e41a63e2fc64ebba5f"
     end
   end
 
