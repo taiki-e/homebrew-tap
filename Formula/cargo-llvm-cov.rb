@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.37"
+  version "0.5.38"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.37/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "cdea4c173930aef177768c6f1ffb928e578ce46a765df0e7c5ebd69bdceadf4a"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.38/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "cf32270e4e9203bfc72a85d514b16ce1f842142cb9adecb2b66e159bee61017f"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.37/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "7662cd747762b6d8e131997b153acf4137f6f35fc3929be1f4db2f1ad4df115a"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.38/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "1411bff8ac7dc0338f6d687312cf0d8a2b43623fb41692bfb1536e3fe99ea8dc"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.37/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "e1ff7c522dd0df727e8af7e83f726094a621418f33ad0da0d49c66fabe76321e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.38/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "6f359baa623e5d98099ab1978e3d5f06bab0d006735fc262056be87106e37575"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.37/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "3444cd1604eae4e2aaf7ad7be7ebc5be2fc3571000b900e41a63e2fc64ebba5f"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.38/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f8820fc550b0d9e78865c0245e7a63ab5b5c88a8825d7a9bdd2e908fd4737317"
     end
   end
 
