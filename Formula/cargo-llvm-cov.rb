@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.5.38"
+  version "0.5.39"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.38/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "cf32270e4e9203bfc72a85d514b16ce1f842142cb9adecb2b66e159bee61017f"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.39/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "22042580bcf6797f92a1e458cd03bc98c107adf9c47b39af2d021309b263ff60"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.38/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "1411bff8ac7dc0338f6d687312cf0d8a2b43623fb41692bfb1536e3fe99ea8dc"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.39/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "683c5fffab903cdac56c3baa0d319bbedb8983ec69c5839116caed1ffef176a0"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.38/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "6f359baa623e5d98099ab1978e3d5f06bab0d006735fc262056be87106e37575"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.39/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "b996cc9ad2979fb8e616ecb37be0dc27c5ed00df52ca7b8e24a3a9d9cfd7029a"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.38/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f8820fc550b0d9e78865c0245e7a63ab5b5c88a8825d7a9bdd2e908fd4737317"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.5.39/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "e2411273e3151383432ec3f7fa1dea89628c9396a4b2077a3cd2ef0adb217a40"
     end
   end
 
