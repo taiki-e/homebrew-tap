@@ -38,9 +38,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
+      - uses: taiki-e/github-actions/checkout@main
       # https://github.com/actions/runner-images/issues/6283
       - run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >>"${GITHUB_PATH}"
         if: startsWith(matrix.os, 'ubuntu')
@@ -55,9 +53,7 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
+      - uses: taiki-e/github-actions/checkout@main
       - run: tools/formula.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
