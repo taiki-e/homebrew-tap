@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.6.11"
+  version "0.6.12"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.11/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "eecb6683cd0cba3e7285ec7c9576a6c34d1fc1a3d302ae0c1a7cb5a7cf0b5c57"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.12/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "bec62ac2c6e9b9497b3879716735b881c280028e2597703bc7ebed538c5c4244"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.11/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "efaa24d7cecced0837e4b4dbb964750a78ba5e72a7426d7b17d37d8afafafcbb"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.12/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "8eee90cdc0dc26eb5b676c3e5929de9cbcb657f1d7e175089ac5f7fb62be08f5"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.11/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "fa75483600372df01863c766ffd0da5611a3a2671adb2f475860569169c34187"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.12/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "89852820f4384192e6faaf6ecb30f5df3b93690d81b10f77d25c0b3bce4a76ed"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.11/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "951db9b5b669a531bdfa0a5d7fa21031ee1ad069b75ca86259ac84ae54b27826"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.12/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "c3418ea4a59d836a6f91d45a9c1e1fe17653c06b0bed79f31a12dec9b2eb53f5"
     end
   end
 
