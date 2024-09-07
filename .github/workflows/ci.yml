@@ -15,7 +15,7 @@ on:
 
 defaults:
   run:
-    shell: bash
+    shell: bash --noprofile --norc -CeEuxo pipefail {0}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: taiki-e/checkout-action@v1
       # https://github.com/actions/runner-images/issues/6283
-      - run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >>"${GITHUB_PATH}"
+      - run: printf '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin\n' >>"${GITHUB_PATH}"
         if: startsWith(matrix.os, 'ubuntu')
       - run: brew install --verbose Formula/*.rb
       - run: brew test --verbose Formula/*.rb
