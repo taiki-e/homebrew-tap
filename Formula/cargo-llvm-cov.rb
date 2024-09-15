@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.6.12"
+  version "0.6.13"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.12/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "bec62ac2c6e9b9497b3879716735b881c280028e2597703bc7ebed538c5c4244"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.13/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "23e3c5e915dbec0e1486ea110f38d49ef768f5c22af5209dde1eb9bb55db8bbc"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.12/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "8eee90cdc0dc26eb5b676c3e5929de9cbcb657f1d7e175089ac5f7fb62be08f5"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.13/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "2d1eb58c8617b1e90ef1fe3e377601ab16773b0aacd70b3f178d93027d132b7b"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.12/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "89852820f4384192e6faaf6ecb30f5df3b93690d81b10f77d25c0b3bce4a76ed"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.13/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "cf8c7e452f99a7e315ddd0eac906945388f2743aaf99961d7a3a5b07cd2035a3"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.12/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "c3418ea4a59d836a6f91d45a9c1e1fe17653c06b0bed79f31a12dec9b2eb53f5"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.13/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "59329fb134dc5fd5885740a2f2efd7376ad8dc5af6f53285082cfda411e48ff6"
     end
   end
 
