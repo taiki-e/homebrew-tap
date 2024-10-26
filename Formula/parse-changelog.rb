@@ -4,25 +4,25 @@
 class ParseChangelog < Formula
   desc "Simple changelog parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-changelog"
-  version "0.6.9"
+  version "0.6.10"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.9/parse-changelog-aarch64-apple-darwin.tar.gz"
-      sha256 "77f50e934acc628584b57b65a8c68b661df388f8f2b06bc70c04e849652cb5f8"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.10/parse-changelog-aarch64-apple-darwin.tar.gz"
+      sha256 "eab58102d2d3aaeff5ff38c7b529948e9955d3ec1f6a4b5033dc72cf1d1883ee"
     else
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.9/parse-changelog-x86_64-apple-darwin.tar.gz"
-      sha256 "a257c54537fefda492cafc55d164d432cf08c0d28ed8b3efe094cd909d488ed9"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.10/parse-changelog-x86_64-apple-darwin.tar.gz"
+      sha256 "3db852258cf4319a87d84905ce1a31f09890631a806cf8d3a69fc2fab1a1bf9f"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.9/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "4b34554144be39cb11a8b1aab0c05c4df7c4dc1bd8d79f263146b8159d0037dc"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.10/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "1ec4a711a2cc4933861c15eb9c7597588cbb168d194f31a1a5c36baf4e151879"
     else
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.9/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "354c60eacad40b1eb4419108f2615eaa510d85b74c8c0cac66436fadd2d78f34"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.10/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "9868ce309083557683a9091fcfeaa106d1f08a504f2a9c9c9b9437562a7f4291"
     end
   end
 
