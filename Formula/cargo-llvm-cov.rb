@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.6.15"
+  version "0.6.16"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.15/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "6fc0737a5227101474b23245fab822563e4f03520b211612be3bd47058b8808d"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.16/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "f1ab5f573d6c49d463f8117501462e2a6a0cead9124b68b4a2fbd8a3f5aad7ba"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.15/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "fe2097463ed82b56272d0d1e59817bbad22033b4680db3a0c30ad13ecf637099"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.16/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "337c619978c7595113353db5775cf953052aba85746f884085e31d2757a03e87"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.15/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "92e5294605b8bd30499a7bbd97b455e2915d1f00cac15bd005f092f76efabda5"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.16/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "02a3a2d9c5de145319bd01f7ae63b6a76f0b57229887859a79b9fc0f57978b33"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.15/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "9519ceac912cb552e1b965c099df264328bb6abf8ef401ff73561612aa873d1e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.16/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "2145d09b8263ba8bdf32f362919e0e2bb8170404bf6edd380b7b442f9017df58"
     end
   end
 
