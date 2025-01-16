@@ -12,71 +12,71 @@ cd -- "$(dirname -- "$0")"/..
 
 owner="taiki-e"
 packages=(
-    "cargo-hack"             # https://github.com/taiki-e/cargo-hack
-    "cargo-llvm-cov"         # https://github.com/taiki-e/cargo-llvm-cov
-    "cargo-minimal-versions" # https://github.com/taiki-e/cargo-minimal-versions
-    "cargo-no-dev-deps"      # https://github.com/taiki-e/cargo-no-dev-deps
-    "parse-changelog"        # https://github.com/taiki-e/parse-changelog
+  "cargo-hack"             # https://github.com/taiki-e/cargo-hack
+  "cargo-llvm-cov"         # https://github.com/taiki-e/cargo-llvm-cov
+  "cargo-minimal-versions" # https://github.com/taiki-e/cargo-minimal-versions
+  "cargo-no-dev-deps"      # https://github.com/taiki-e/cargo-no-dev-deps
+  "parse-changelog"        # https://github.com/taiki-e/parse-changelog
 )
 descriptions=(
-    "Cargo subcommand for testing and continuous integration"
-    "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
-    "Cargo subcommand for proper use of -Z minimal-versions"
-    "Cargo subcommand for running cargo without dev-dependencies"
-    "Simple changelog parser, written in Rust"
+  "Cargo subcommand for testing and continuous integration"
+  "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
+  "Cargo subcommand for proper use of -Z minimal-versions"
+  "Cargo subcommand for running cargo without dev-dependencies"
+  "Simple changelog parser, written in Rust"
 )
 tests=(
-    'system "#{bin}/cargo-hack", "hack", "--version"'
-    'system "#{bin}/cargo-llvm-cov", "llvm-cov", "--version"'
-    'system "#{bin}/cargo-minimal-versions", "minimal-versions", "--version"'
-    'system "#{bin}/cargo-no-dev-deps", "no-dev-deps", "--version"'
-    'system "#{bin}/parse-changelog", "--version"'
+  'system "#{bin}/cargo-hack", "hack", "--version"'
+  'system "#{bin}/cargo-llvm-cov", "llvm-cov", "--version"'
+  'system "#{bin}/cargo-minimal-versions", "minimal-versions", "--version"'
+  'system "#{bin}/cargo-no-dev-deps", "no-dev-deps", "--version"'
+  'system "#{bin}/parse-changelog", "--version"'
 )
 
 retry() {
-    for i in {1..10}; do
-        if "$@"; then
-            return 0
-        else
-            sleep "${i}"
-        fi
-    done
-    "$@"
+  for i in {1..10}; do
+    if "$@"; then
+      return 0
+    else
+      sleep "${i}"
+    fi
+  done
+  "$@"
 }
 info() {
-    printf >&2 'info: %s\n' "$*"
+  printf >&2 'info: %s\n' "$*"
 }
 run_curl() {
-    if [[ -n "${GITHUB_TOKEN:-}" ]]; then
-        retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
-            -H "Authorization: token ${GITHUB_TOKEN}" \
-            "$@"
-    else
-        retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
-            "$@"
-    fi
+  if [[ -n "${GITHUB_TOKEN:-}" ]]; then
+    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
+      -H "Authorization: token ${GITHUB_TOKEN}" \
+      "$@"
+  else
+    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
+      "$@"
+  fi
 }
 
 for i in "${!packages[@]}"; do
-    package="${packages[${i}]}"
-    class=$(sed -E 's/(^|-)(\w)/\U\2/g' <<<"${package}")
-    info "fetching latest version of ${package}"
-    tag=$(run_curl "https://api.github.com/repos/${owner}/${package}/releases/latest" | jq -r '.tag_name')
-    aarch64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-aarch64-unknown-linux-musl.tar.gz"
-    aarch64_mac_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-aarch64-apple-darwin.tar.gz"
-    x86_64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
-    x86_64_mac_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
-    info "downloading ${aarch64_linux_url} for checksum"
-    aarch64_linux_sha=$(run_curl "${aarch64_linux_url}" | sha256sum)
-    info "downloading ${aarch64_mac_url} for checksum"
-    aarch64_mac_sha=$(run_curl "${aarch64_mac_url}" | sha256sum)
-    info "downloading ${x86_64_linux_url} for checksum"
-    x86_64_linux_sha=$(run_curl "${x86_64_linux_url}" | sha256sum)
-    info "downloading ${x86_64_mac_url} for checksum"
-    x86_64_mac_sha=$(run_curl "${x86_64_mac_url}" | sha256sum)
+  package="${packages[${i}]}"
+  class=$(sed -E 's/(^|-)(\w)/\U\2/g' <<<"${package}")
+  info "fetching latest version of ${package}"
+  tag=$(run_curl "https://api.github.com/repos/${owner}/${package}/releases/latest" | jq -r '.tag_name')
+  aarch64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-aarch64-unknown-linux-musl.tar.gz"
+  aarch64_mac_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-aarch64-apple-darwin.tar.gz"
+  x86_64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
+  x86_64_mac_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
+  info "downloading ${aarch64_linux_url} for checksum"
+  aarch64_linux_sha=$(run_curl "${aarch64_linux_url}" | sha256sum)
+  info "downloading ${aarch64_mac_url} for checksum"
+  aarch64_mac_sha=$(run_curl "${aarch64_mac_url}" | sha256sum)
+  info "downloading ${x86_64_linux_url} for checksum"
+  x86_64_linux_sha=$(run_curl "${x86_64_linux_url}" | sha256sum)
+  info "downloading ${x86_64_mac_url} for checksum"
+  x86_64_mac_sha=$(run_curl "${x86_64_mac_url}" | sha256sum)
 
-    # refs: https://rubydoc.brew.sh/Hardware/CPU.html
-    cat >|./Formula/"${package}".rb <<EOF
+  # refs: https://rubydoc.brew.sh/Hardware/CPU.html
+  cat >|./Formula/"${package}".rb <<EOF
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 # This file is @generated by ${0##*/}.
 # It is not intended for manual editing.

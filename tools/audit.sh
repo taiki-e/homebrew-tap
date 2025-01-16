@@ -17,17 +17,17 @@ brew tap-new --no-git "${tap_name}"
 cp -- Formula/*.rb "$(brew --repo "${tap_name}")"/Formula
 
 if [[ -n "${CI:-}" ]]; then
-    for formula in Formula/*.rb; do
-        name="${formula##*/}"
-        name="${name%.*}"
-        brew uninstall "${tap_name}/${name}"
-    done
+  for formula in Formula/*.rb; do
+    name="${formula##*/}"
+    name="${name%.*}"
+    brew uninstall "${tap_name}/${name}"
+  done
 fi
 
 for formula in Formula/*.rb; do
-    name="${formula##*/}"
-    name="${name%.*}"
-    brew audit --strict "${tap_name}/${name}"
+  name="${formula##*/}"
+  name="${name%.*}"
+  brew audit --strict "${tap_name}/${name}"
 done
 
 brew untap "${tap_name}"
