@@ -4,25 +4,25 @@
 class ParseChangelog < Formula
   desc "Simple changelog parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-changelog"
-  version "0.6.10"
+  version "0.6.11"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.10/parse-changelog-aarch64-apple-darwin.tar.gz"
-      sha256 "eab58102d2d3aaeff5ff38c7b529948e9955d3ec1f6a4b5033dc72cf1d1883ee"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.11/parse-changelog-aarch64-apple-darwin.tar.gz"
+      sha256 "e4e841ba10e7a0e314ec192142c016974f4999a03fc0f37c8803708654098c91"
     else
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.10/parse-changelog-x86_64-apple-darwin.tar.gz"
-      sha256 "3db852258cf4319a87d84905ce1a31f09890631a806cf8d3a69fc2fab1a1bf9f"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.11/parse-changelog-x86_64-apple-darwin.tar.gz"
+      sha256 "9176db18ab6adc3bb1d4302eb52c83a9d46319df2b4671fccc4669dd8ce36fc6"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.10/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "1ec4a711a2cc4933861c15eb9c7597588cbb168d194f31a1a5c36baf4e151879"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.11/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "a294359f1b1a904a34911fbf482c69ee28924dc8c27f2a1b84b4eb2108b6df3d"
     else
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.10/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "9868ce309083557683a9091fcfeaa106d1f08a504f2a9c9c9b9437562a7f4291"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.11/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "805c0e86ad53c734973e1f55efc8fb6d82919029fdca4d27f80d590f94688edc"
     end
   end
 
