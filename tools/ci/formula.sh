@@ -22,7 +22,7 @@ set -x
 has_update=''
 for formula in Formula/*.rb; do
   git add -N "${formula}"
-  if ! git diff --exit-code -- "${formula}"; then
+  if ! git diff --exit-code -- "${formula}" &>/dev/null; then
     name="${formula##*/}"
     name="${name%.*}"
     version=$(grep -E '^\s+version "' "${formula}" | sed -E 's/^\s+version "//; s/"$//')
