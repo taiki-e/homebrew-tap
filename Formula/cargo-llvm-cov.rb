@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.6.17"
+  version "0.6.18"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.17/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "ea91a9b2ad2b067ab2ad85b0197e0902bf06095b4e53435b86f2b3705eb26a18"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.18/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "30680c53a21f03d6a5aa40068cfc303de1cfac42ed7acd364256a42a53e1c0bf"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.17/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "d25070f61cb5b512c2eb4d800809b9fb834b35cea685d2548fed84abe10112ee"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.18/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "bf5ea6340c7b53d5b34da4d861fdd28b7aaadcda574c64dfc66c9bfb06f3e79d"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.17/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "c7244f998e53db610e195e8e2419b9fc099a93e0ca9fdd037c3367d7088f3d18"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.18/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "b7e923aafc0298ec051ad52fdc884790b2bcabac8e16f952b2dd2acfcfa3d79f"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.17/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "68002f4e33a316c4e378c506227f29a8f75e9f7cd701c950a6e98126bc634272"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.18/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "6c2a864fe9bf63270b24aa0786a465799cafc2b9e9c0725bee1325df5e0863e6"
     end
   end
 
