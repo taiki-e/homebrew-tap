@@ -46,6 +46,5 @@ jobs:
       # https://github.com/actions/runner-images/issues/6283
       - run: printf '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin\n' >>"${GITHUB_PATH}"
         if: startsWith(matrix.os, 'ubuntu')
-      - run: brew install --verbose Formula/*.rb
-      - run: brew test --verbose Formula/*.rb
-      # - run: tools/audit.sh # disable due to an upstream bug
+      - run: brew --version
+      - run: tools/ci/test.sh
