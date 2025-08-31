@@ -31,6 +31,6 @@ class ParseChangelog < Formula
   end
 
   test do
-    system "#{bin}/parse-changelog", "--version"
+    system bin/"parse-changelog", "--version"
   end
 end

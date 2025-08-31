@@ -31,6 +31,6 @@ class CargoHack < Formula
   end
 
   test do
-    system "#{bin}/cargo-hack", "hack", "--version"
+    system bin/"cargo-hack", "hack", "--version"
   end
 end

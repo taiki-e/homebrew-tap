@@ -31,6 +31,6 @@ class ParseDockerfile < Formula
   end
 
   test do
-    system "#{bin}/parse-dockerfile", "--version"
+    system bin/"parse-dockerfile", "--version"
   end
 end

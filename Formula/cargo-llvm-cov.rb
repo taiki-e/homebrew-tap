@@ -31,6 +31,6 @@ class CargoLlvmCov < Formula
   end
 
   test do
-    system "#{bin}/cargo-llvm-cov", "llvm-cov", "--version"
+    system bin/"cargo-llvm-cov", "llvm-cov", "--version"
   end
 end

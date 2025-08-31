@@ -31,6 +31,6 @@ class CargoMinimalVersions < Formula
   end
 
   test do
-    system "#{bin}/cargo-minimal-versions", "minimal-versions", "--version"
+    system bin/"cargo-minimal-versions", "minimal-versions", "--version"
   end
 end

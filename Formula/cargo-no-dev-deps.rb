@@ -31,6 +31,6 @@ class CargoNoDevDeps < Formula
   end
 
   test do
-    system "#{bin}/cargo-no-dev-deps", "no-dev-deps", "--version"
+    system bin/"cargo-no-dev-deps", "no-dev-deps", "--version"
   end
 end

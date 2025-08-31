@@ -28,12 +28,12 @@ descriptions=(
   "Dockerfile parser, written in Rust"
 )
 tests=(
-  'system "#{bin}/cargo-hack", "hack", "--version"'
-  'system "#{bin}/cargo-llvm-cov", "llvm-cov", "--version"'
-  'system "#{bin}/cargo-minimal-versions", "minimal-versions", "--version"'
-  'system "#{bin}/cargo-no-dev-deps", "no-dev-deps", "--version"'
-  'system "#{bin}/parse-changelog", "--version"'
-  'system "#{bin}/parse-dockerfile", "--version"'
+  'system bin/"cargo-hack", "hack", "--version"'
+  'system bin/"cargo-llvm-cov", "llvm-cov", "--version"'
+  'system bin/"cargo-minimal-versions", "minimal-versions", "--version"'
+  'system bin/"cargo-no-dev-deps", "no-dev-deps", "--version"'
+  'system bin/"parse-changelog", "--version"'
+  'system bin/"parse-dockerfile", "--version"'
 )
 
 retry() {
