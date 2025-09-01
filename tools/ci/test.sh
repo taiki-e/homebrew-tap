@@ -20,23 +20,28 @@ tap_name=taiki-e/test
 formulas=()
 for formula in Formula/*.rb; do
   name="${formula##*/}"
-  formulas+=("${tap_name}/${name%.*}")
+  formulas+=("${name%.*}")
 done
 
 x brew tap-new --no-git "${tap_name}"
 x cp -- Formula/*.rb "$(brew --repo "${tap_name}")"/Formula
 
 for formula in "${formulas[@]}"; do
-  x brew install "${formula}"
+  x brew install "${tap_name}/${formula}"
+  if [[ "${formula}" == "cargo-"* ]]; then
+    x cargo "${formula#cargo-}" --version
+  else
+    x "${formula}" --version
+  fi
 done
 for formula in "${formulas[@]}"; do
-  x brew test --verbose "${formula}"
+  x brew test --verbose "${tap_name}/${formula}"
 done
 for formula in "${formulas[@]}"; do
-  x brew uninstall "${formula}"
+  x brew uninstall "${tap_name}/${formula}"
 done
 for formula in "${formulas[@]}"; do
-  x brew audit --strict "${formula}"
+  x brew audit --strict "${tap_name}/${formula}"
 done
 
 x brew untap "${tap_name}"

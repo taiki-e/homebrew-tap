@@ -27,14 +27,6 @@ descriptions=(
   "Simple changelog parser, written in Rust"
   "Dockerfile parser, written in Rust"
 )
-tests=(
-  'system bin/"cargo-hack", "hack", "--version"'
-  'system bin/"cargo-llvm-cov", "llvm-cov", "--version"'
-  'system bin/"cargo-minimal-versions", "minimal-versions", "--version"'
-  'system bin/"cargo-no-dev-deps", "no-dev-deps", "--version"'
-  'system bin/"parse-changelog", "--version"'
-  'system bin/"parse-dockerfile", "--version"'
-)
 
 retry() {
   for i in {1..10}; do
@@ -63,6 +55,11 @@ run_curl() {
 for i in "${!packages[@]}"; do
   package="${packages[${i}]}"
   class=$(sed -E 's/(^|-)(\w)/\U\2/g' <<<"${package}")
+  if [[ "${package}" == "cargo-"* ]]; then
+    subcmd=", \"${package#cargo-}\""
+  else
+    subcmd=''
+  fi
   info "fetching latest version of ${package}"
   tag=$(run_curl "https://api.github.com/repos/${owner}/${package}/releases/latest" | jq -r '.tag_name')
   aarch64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-aarch64-unknown-linux-musl.tar.gz"
@@ -112,7 +109,7 @@ class ${class} < Formula
   end
 
   test do
-    ${tests[${i}]}
+    system bin/"${package}"${subcmd}, "--version"
   end
 end
 EOF
