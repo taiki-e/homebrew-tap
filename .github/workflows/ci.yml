@@ -36,13 +36,18 @@ jobs:
       matrix:
         os:
           - ubuntu-22.04
+          - ubuntu-22.04-arm
           - ubuntu-24.04
+          - ubuntu-24.04-arm
           - macos-14
           - macos-15
     runs-on: ${{ matrix.os }}
     timeout-minutes: 60
     steps:
       - uses: taiki-e/checkout-action@v1
+      # https://github.com/Homebrew/brew/issues/19208
+      - run: bash -c "$(curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        if: endsWith(matrix.os, '-arm')
       # https://github.com/actions/runner-images/issues/6283
       - run: printf '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin\n' >>"${GITHUB_PATH}"
         if: startsWith(matrix.os, 'ubuntu')
