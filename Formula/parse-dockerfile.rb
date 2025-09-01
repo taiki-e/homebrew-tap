@@ -4,7 +4,6 @@
 class ParseDockerfile < Formula
   desc "Dockerfile parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-dockerfile"
-  version "0.1.1"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do

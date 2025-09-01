@@ -4,7 +4,6 @@
 class CargoHack < Formula
   desc "Cargo subcommand for testing and continuous integration"
   homepage "https://github.com/taiki-e/cargo-hack"
-  version "0.6.37"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do

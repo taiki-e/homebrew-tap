@@ -35,11 +35,8 @@ done
 for formula in "${formulas[@]}"; do
   x brew uninstall "${formula}"
 done
-# 4.6.6 has useless "Stable: `version ...` is redundant with version scanned from URL" error
-if ! brew --version | grep -Fq '4.6.6'; then
-  for formula in "${formulas[@]}"; do
-    x brew audit --strict "${formula}"
-  done
-fi
+for formula in "${formulas[@]}"; do
+  x brew audit --strict "${formula}"
+done
 
 x brew untap "${tap_name}"

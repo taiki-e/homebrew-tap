@@ -4,7 +4,6 @@
 class CargoMinimalVersions < Formula
   desc "Cargo subcommand for proper use of -Z minimal-versions"
   homepage "https://github.com/taiki-e/cargo-minimal-versions"
-  version "0.1.31"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do

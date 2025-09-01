@@ -4,7 +4,6 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  version "0.6.18"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do

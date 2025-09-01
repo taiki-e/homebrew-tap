@@ -4,7 +4,6 @@
 class ParseChangelog < Formula
   desc "Simple changelog parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-changelog"
-  version "0.6.12"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do

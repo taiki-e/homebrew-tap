@@ -4,7 +4,6 @@
 class CargoNoDevDeps < Formula
   desc "Cargo subcommand for running cargo without dev-dependencies"
   homepage "https://github.com/taiki-e/cargo-no-dev-deps"
-  version "0.2.16"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
