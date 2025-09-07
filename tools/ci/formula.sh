@@ -25,7 +25,7 @@ for formula in Formula/*.rb; do
   if ! git diff --exit-code -- "${formula}" &>/dev/null; then
     name="${formula##*/}"
     name="${name%.*}"
-    version=$(grep -E '^\s+version "' "${formula}" | sed -E 's/^\s+version "//; s/"$//')
+    version=$(grep -E '^\s+# version "' "${formula}" | sed -E 's/^\s+# version "//; s/"$//')
     git add "${formula}"
     git commit -m "Update ${name} to ${version}"
     has_update=1

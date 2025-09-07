@@ -83,6 +83,7 @@ for i in "${!packages[@]}"; do
 class ${class} < Formula
   desc "${descriptions[${i}]}"
   homepage "https://github.com/${owner}/${package}"
+  # version "${tag#v}"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
