@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  # version "0.6.18"
+  # version "0.6.19"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.18/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "30680c53a21f03d6a5aa40068cfc303de1cfac42ed7acd364256a42a53e1c0bf"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.19/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "c612fd5b617e0ef8d872f2f9c7b4e88bf42dc3659f0685b36cc77314d132d511"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.18/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "bf5ea6340c7b53d5b34da4d861fdd28b7aaadcda574c64dfc66c9bfb06f3e79d"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.19/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "afb8acb2d533fc42d054b2de907099d1373b88a6cd7a30c7576a7b28bac4bc2c"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.18/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "b7e923aafc0298ec051ad52fdc884790b2bcabac8e16f952b2dd2acfcfa3d79f"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.19/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "01742b65ef2e9e8f2bc2fb6fa435e6f484d3330302133c722977ab07ebce4f7d"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.18/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "6c2a864fe9bf63270b24aa0786a465799cafc2b9e9c0725bee1325df5e0863e6"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.19/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "35b0f9bbb6d5c8048c0b53084b956552ed1f8f2f447af18008ca8f7ce2639877"
     end
   end
 
