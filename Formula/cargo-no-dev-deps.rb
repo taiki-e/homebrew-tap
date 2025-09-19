@@ -4,25 +4,25 @@
 class CargoNoDevDeps < Formula
   desc "Cargo subcommand for running cargo without dev-dependencies"
   homepage "https://github.com/taiki-e/cargo-no-dev-deps"
-  # version "0.2.17"
+  # version "0.2.18"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.17/cargo-no-dev-deps-aarch64-apple-darwin.tar.gz"
-      sha256 "8f94623e9e8646dad302b454c5ea0b3940c03cadd1a60e3357ef55560baeead6"
+      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.18/cargo-no-dev-deps-aarch64-apple-darwin.tar.gz"
+      sha256 "6aa1e3cc1a0328dc90e1b39945635f793a61cf66b1d6c59fc02bd23287826975"
     else
-      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.17/cargo-no-dev-deps-x86_64-apple-darwin.tar.gz"
-      sha256 "f60dfb8132e9b5541da85a0aca8dfbf59c7034b5582443bb0e13cec48f71fea6"
+      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.18/cargo-no-dev-deps-x86_64-apple-darwin.tar.gz"
+      sha256 "9e37659347401bfd465dc9166efd650efbc2034088d3bd93e0f6e20dc947c76f"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.17/cargo-no-dev-deps-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "7cbf048ae741ab02104fb8601cd6e413e3772a6fdc0c95e5754cd7f7f619dc96"
+      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.18/cargo-no-dev-deps-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "a77638bac62bff6243b4673c1c94baf89fe2cf0ea2811d8deefefdd9c612d36d"
     else
-      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.17/cargo-no-dev-deps-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "1e49091f1b56202ba6b7b8a2b032d82fbed1682a42bd4d1a2685801c063f6540"
+      url "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.18/cargo-no-dev-deps-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "d68952522637da1aad5befe15c47cf0eb0224ea4bcc5c7346c53bb4a4adfab24"
     end
   end
 
