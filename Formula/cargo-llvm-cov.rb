@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  # version "0.6.19"
+  # version "0.6.20"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.19/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "c612fd5b617e0ef8d872f2f9c7b4e88bf42dc3659f0685b36cc77314d132d511"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.20/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "72b842eb4097342a13202d6963ae219c4873f74786186769209819f82fe9c855"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.19/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "afb8acb2d533fc42d054b2de907099d1373b88a6cd7a30c7576a7b28bac4bc2c"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.20/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "4a1698aeb6aeb0ffd05c47a3285e168837e3d4d0838ac0c67a8f773c18053aee"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.19/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "01742b65ef2e9e8f2bc2fb6fa435e6f484d3330302133c722977ab07ebce4f7d"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.20/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "bd503b8bd04c24fb582e9850e14e5c7af5edbbe0e0a266b3b1198f3e2e6de3e1"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.19/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "35b0f9bbb6d5c8048c0b53084b956552ed1f8f2f447af18008ca8f7ce2639877"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.20/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "87822bb434a25cb0c71e93d1be16c65f5a8031c9bb3ee6e0580511048d9c0c90"
     end
   end
 
