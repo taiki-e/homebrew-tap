@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  # version "0.6.20"
+  # version "0.6.21"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.20/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "72b842eb4097342a13202d6963ae219c4873f74786186769209819f82fe9c855"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.21/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "623bab61799ab4de8a88e0bd8c5101133cb6a4377a0f22f06be91913f40a3ba9"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.20/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "4a1698aeb6aeb0ffd05c47a3285e168837e3d4d0838ac0c67a8f773c18053aee"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.21/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "0bae81daedc549de52691cab8ecc4c6bf9fb03d16eb693f6de4a871cfe1f2413"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.20/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "bd503b8bd04c24fb582e9850e14e5c7af5edbbe0e0a266b3b1198f3e2e6de3e1"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.21/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "f7f3d23104f79dbc66831335f1e77e5fa12932f9b88d449a8170390c86e4d064"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.20/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "87822bb434a25cb0c71e93d1be16c65f5a8031c9bb3ee6e0580511048d9c0c90"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.21/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "0fa9ac9953583fa993786b529ce9c828a2e548ee9d183f5e908a357157d030f0"
     end
   end
 
