@@ -53,5 +53,9 @@ jobs:
       # https://github.com/actions/runner-images/issues/6283
       - run: printf '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin\n' >>"${GITHUB_PATH}"
         if: startsWith(matrix.os, 'ubuntu')
+      # https://github.com/rubygems/rubygems/issues/7983
+      - name: Workaround for bundler permission issue
+        run: chmod -R o-w /home/linuxbrew/.linuxbrew/Homebrew/Library/Homebrew/vendor/bundle/ruby/3.4.0/gems
+        if: endsWith(matrix.os, '-arm')
       - run: brew --version
       - run: tools/ci/test.sh
