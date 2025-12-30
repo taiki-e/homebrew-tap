@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  # version "0.6.21"
+  # version "0.6.22"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.21/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "623bab61799ab4de8a88e0bd8c5101133cb6a4377a0f22f06be91913f40a3ba9"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.22/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "99950504180d51bd4a1b8009d389440e7143f38fcf36d0a4f284e52dd9113c9b"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.21/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "0bae81daedc549de52691cab8ecc4c6bf9fb03d16eb693f6de4a871cfe1f2413"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.22/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "df089d98e57c5b08f1bedd3ffd0cafa2af4a41cfe7aa26c45ff246ec9a1c2dcb"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.21/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "f7f3d23104f79dbc66831335f1e77e5fa12932f9b88d449a8170390c86e4d064"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.22/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "a9d8389660462348ee8b9270ba568dd4a8df1d1d45da988d9749cdfbbdc5ac45"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.21/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "0fa9ac9953583fa993786b529ce9c828a2e548ee9d183f5e908a357157d030f0"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.22/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "412ef7263fbddc589c05bcc11b1fa0d039f723b0fcc162d55443bc22dc234bb2"
     end
   end
 
