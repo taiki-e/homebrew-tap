@@ -38,18 +38,44 @@ retry() {
   done
   "$@"
 }
+bail() {
+  if [[ -n "${GITHUB_ACTIONS:-}" ]]; then
+    printf '::error::%s\n' "$*"
+  else
+    printf >&2 'error: %s\n' "$*"
+  fi
+  exit 1
+}
 info() {
   printf >&2 'info: %s\n' "$*"
 }
 run_curl() {
   if [[ -n "${GITHUB_TOKEN:-}" ]]; then
     retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
-      -H "Authorization: token ${GITHUB_TOKEN}" \
+      -H "Authorization: Bearer ${GITHUB_TOKEN}" \
       "$@"
   else
     retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
       "$@"
   fi
+}
+download_and_verify() {
+  local url="$1"
+  local out="tools/tmp/cache/${package}/${tag}"
+  mkdir -p -- "${out}"
+  out="${out}/${url##*/}"
+  info "downloading ${url} for verification"
+  run_curl -o "${out}" "${url}"
+  local sha expected_sha
+  sha=$(sha256sum "${out}")
+  sha="${sha%% *}"
+  expected_sha=$(jq -r '.assets[] | select(.browser_download_url == "'"${url}"'") | .digest' <<<"${api}")
+  if [[ "sha256:${sha}" != "${expected_sha}" ]]; then
+    bail "digest mismatch for ${url}; expected '${expected_sha}', actual 'sha256:${sha}'"
+  fi
+  gh release -R "https://github.com/${owner}/${package}" verify "${tag}" >&2
+  gh release -R "https://github.com/${owner}/${package}" verify-asset "${tag}" "${out}" >&2
+  printf '%s\n' "${sha}"
 }
 
 for i in "${!packages[@]}"; do
@@ -61,19 +87,16 @@ for i in "${!packages[@]}"; do
     subcmd=''
   fi
   info "fetching latest version of ${package}"
-  tag=$(run_curl "https://api.github.com/repos/${owner}/${package}/releases/latest" | jq -r '.tag_name')
+  api=$(run_curl "https://api.github.com/repos/${owner}/${package}/releases/latest")
+  tag=$(jq -r '.tag_name' <<<"${api}")
   aarch64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-aarch64-unknown-linux-musl.tar.gz"
   aarch64_mac_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-aarch64-apple-darwin.tar.gz"
   x86_64_linux_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-unknown-linux-musl.tar.gz"
   x86_64_mac_url="https://github.com/${owner}/${package}/releases/download/${tag}/${package}-x86_64-apple-darwin.tar.gz"
-  info "downloading ${aarch64_linux_url} for checksum"
-  aarch64_linux_sha=$(run_curl "${aarch64_linux_url}" | sha256sum)
-  info "downloading ${aarch64_mac_url} for checksum"
-  aarch64_mac_sha=$(run_curl "${aarch64_mac_url}" | sha256sum)
-  info "downloading ${x86_64_linux_url} for checksum"
-  x86_64_linux_sha=$(run_curl "${x86_64_linux_url}" | sha256sum)
-  info "downloading ${x86_64_mac_url} for checksum"
-  x86_64_mac_sha=$(run_curl "${x86_64_mac_url}" | sha256sum)
+  aarch64_linux_sha=$(download_and_verify "${aarch64_linux_url}")
+  aarch64_mac_sha=$(download_and_verify "${aarch64_mac_url}")
+  x86_64_linux_sha=$(download_and_verify "${x86_64_linux_url}")
+  x86_64_mac_sha=$(download_and_verify "${x86_64_mac_url}")
 
   # refs: https://rubydoc.brew.sh/Hardware/CPU.html
   cat >|./Formula/"${package}".rb <<EOF
@@ -89,19 +112,19 @@ class ${class} < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "${aarch64_mac_url}"
-      sha256 "${aarch64_mac_sha%% *}"
+      sha256 "${aarch64_mac_sha}"
     else
       url "${x86_64_mac_url}"
-      sha256 "${x86_64_mac_sha%% *}"
+      sha256 "${x86_64_mac_sha}"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
       url "${aarch64_linux_url}"
-      sha256 "${aarch64_linux_sha%% *}"
+      sha256 "${aarch64_linux_sha}"
     else
       url "${x86_64_linux_url}"
-      sha256 "${x86_64_linux_sha%% *}"
+      sha256 "${x86_64_linux_sha}"
     end
   end
 
