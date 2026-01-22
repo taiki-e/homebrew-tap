@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  # version "0.6.23"
+  # version "0.6.24"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.23/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "7e36889933befc5e548e3b6fa5655df91a5f9fc565ace86780129cf7e9286ab4"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.24/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "429588cdfbd2eeb2aa38313e707fe0162cca1ac87e9f5287a97d4fe6111d26c2"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.23/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "febf0280656b863542ba101f3f8db2103df34b8dda2c240749fefc878117f493"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.24/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "cb1f5587210046de3fff3dbc84259e0293a189c152d6a34d29a544262f3d9195"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.23/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "9bde17bc15590b287d3465f5db73c112968c251cb9ff2ea1f3139055ea0994b6"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.24/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "e08dc76036142e365777e5f12d194e7c78a3b421853ec5b505170b2cf2679dc6"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.23/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "7d731737fb4f538fdea8dfadccb2270bf5ccd1ae3b1f4d8eafb449587f11d554"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.24/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "9ba3c42b3e0e68fd8ac4e9e40c134632ab0aa640b4011e18c35447537e6acc5e"
     end
   end
 
