@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  # version "0.6.24"
+  # version "0.7.0"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.24/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "429588cdfbd2eeb2aa38313e707fe0162cca1ac87e9f5287a97d4fe6111d26c2"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.7.0/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "1a12d18a5bee8bfcbed753fc4efee6e8d523e3ef79908ce1456f09c42e697788"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.24/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "cb1f5587210046de3fff3dbc84259e0293a189c152d6a34d29a544262f3d9195"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.7.0/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "afc069198a7ec5875ff60e29cf0014abcdc04c70a5315a0091205ee7a8825228"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.24/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "e08dc76036142e365777e5f12d194e7c78a3b421853ec5b505170b2cf2679dc6"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.7.0/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "c2375e09d3c3f271c5a834c6871ad07086e0d2603ea7e19a952dcb2380631a99"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.6.24/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "9ba3c42b3e0e68fd8ac4e9e40c134632ab0aa640b4011e18c35447537e6acc5e"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.7.0/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "7a4cd36e711eb9eee1d4d9e6f253aa9331860e3871e16136993ffc9e66192c12"
     end
   end
 
