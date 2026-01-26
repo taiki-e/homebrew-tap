@@ -4,25 +4,25 @@
 class CargoLlvmCov < Formula
   desc "Cargo subcommand for LLVM source-based code coverage (-C instrument-coverage)"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
-  # version "0.7.1"
+  # version "0.8.1"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.7.1/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
-      sha256 "2da59b577fa3e1debc1286699f43a2f8939cbb58abf08da39be7cff28f9c73c2"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.8.1/cargo-llvm-cov-aarch64-apple-darwin.tar.gz"
+      sha256 "ec06f7cd5077c032a6738244de79fdf8a679163b2b80a7e07f4196cf11ccc4b1"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.7.1/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
-      sha256 "ba7732038f66de1ffdc0e87995af55d53ff53f9d7013f00a868fcbe315f11a5d"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.8.1/cargo-llvm-cov-x86_64-apple-darwin.tar.gz"
+      sha256 "933284e1d18724077339a17eca322f42ae1c62915fda722b88e6cd7bb0311598"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.7.1/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "2e2689bf5c188eddf4995357d5f910f33a52f5d038f44a78213eecc31d8361dd"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.8.1/cargo-llvm-cov-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "525141112890d991d1ca5297a283c9bae606964154600399b1c42e96ee131979"
     else
-      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.7.1/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "abbd3abd098f6b9350f873c3e66240a6b56da65f831fa6fc043409035b773e28"
+      url "https://github.com/taiki-e/cargo-llvm-cov/releases/download/v0.8.1/cargo-llvm-cov-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "9263f13fed792d8cf57512f749ec43a3e38ac006b66e26f0bd7bbe98a392eb38"
     end
   end
 
