@@ -8,7 +8,7 @@ cd -- "$(dirname -- "$0")"/..
 # Update formulas.
 #
 # USAGE:
-#    ./tools/formula.sh
+#    GH_TOKEN=$(gh auth token) ./tools/formula.sh
 
 owner="taiki-e"
 packages=(
@@ -51,11 +51,11 @@ info() {
 }
 run_curl() {
   if [[ -n "${GITHUB_TOKEN:-}" ]]; then
-    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
+    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-all-errors \
       -H "Authorization: Bearer ${GITHUB_TOKEN}" \
       "$@"
   else
-    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-connrefused \
+    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-all-errors \
       "$@"
   fi
 }
@@ -80,7 +80,7 @@ download_and_verify() {
 
 for i in "${!packages[@]}"; do
   package="${packages[${i}]}"
-  class=$(sed -E 's/(^|-)(\w)/\U\2/g' <<<"${package}")
+  class=$(sed -E 's/(^|-|_)(\w)/\U\2/g' <<<"${package}")
   if [[ "${package}" == "cargo-"* ]]; then
     subcmd=", \"${package#cargo-}\""
   else
