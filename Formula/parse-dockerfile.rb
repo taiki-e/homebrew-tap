@@ -4,25 +4,25 @@
 class ParseDockerfile < Formula
   desc "Dockerfile parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-dockerfile"
-  # version "0.1.4"
+  # version "0.1.5"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.4/parse-dockerfile-aarch64-apple-darwin.tar.gz"
-      sha256 "db836ffb2b891ca5b1b6e4060102e73ac4aad4513e271fdd2255f79977a4b263"
+      url "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.5/parse-dockerfile-aarch64-apple-darwin.tar.gz"
+      sha256 "011754314729e81a5f2d2667c347ba8355b70d81d777f7d0285b0402842ec324"
     else
-      url "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.4/parse-dockerfile-x86_64-apple-darwin.tar.gz"
-      sha256 "117dd15cf58785ed9ab30f73d192663ac37e744acd3befe50116ede6c8c85d49"
+      url "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.5/parse-dockerfile-x86_64-apple-darwin.tar.gz"
+      sha256 "6e7d45d03015f90f1f779740b9d2b64b40ea985f7b83cb11d791b31bc69d03dd"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.4/parse-dockerfile-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "e08dcabec80d9bd9e06730e3c58eb466fd8023564a9c1862af5423367e6cef20"
+      url "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.5/parse-dockerfile-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "59d82f43f74b4edc17ee04a7de5e8ff31afecb7a89c4352479a366c28d6db747"
     else
-      url "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.4/parse-dockerfile-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "2ee28fd2e807ace8edb6fbb2df063791d7c23d4e926f9806a175bb1d0a37d846"
+      url "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.5/parse-dockerfile-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "a768149ac916537bb4383836daa0ad850db67e0b5f2eafa4ed5751af7e787744"
     end
   end
 
