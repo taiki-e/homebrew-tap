@@ -73,9 +73,12 @@ download_and_verify() {
   if [[ "sha256:${sha}" != "${expected_sha}" ]]; then
     bail "digest mismatch for ${url}; expected '${expected_sha}', actual 'sha256:${sha}'"
   fi
-  gh release -R "https://github.com/${owner}/${package}" verify "${tag}" >&2
-  gh release -R "https://github.com/${owner}/${package}" verify-asset "${tag}" "${out}" >&2
-  gh attestation verify --owner "${owner}" "${out}" >&2
+  (
+    set -x
+    gh release -R "https://github.com/${owner}/${package}" verify "${tag}" >&2
+    gh release -R "https://github.com/${owner}/${package}" verify-asset "${tag}" "${out}" >&2
+    gh attestation verify --repo "${owner}/${package}" --signer-workflow "${owner}/github-actions/.github/workflows/rust-release.yml" "${out}" >&2
+  )
   printf '%s\n' "${sha}"
 }
 
