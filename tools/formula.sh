@@ -75,6 +75,7 @@ download_and_verify() {
   fi
   gh release -R "https://github.com/${owner}/${package}" verify "${tag}" >&2
   gh release -R "https://github.com/${owner}/${package}" verify-asset "${tag}" "${out}" >&2
+  gh attestation verify --owner "${owner}" "${out}" >&2
   printf '%s\n' "${sha}"
 }
 
