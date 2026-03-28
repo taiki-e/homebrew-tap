@@ -8,7 +8,7 @@ cd -- "$(dirname -- "$0")"/..
 # Update formulas.
 #
 # USAGE:
-#    GH_TOKEN=$(gh auth token) ./tools/formula.sh
+#    GITHUB_TOKEN=$(gh auth token) ./tools/formula.sh
 
 owner="taiki-e"
 packages=(
@@ -51,11 +51,11 @@ info() {
 }
 run_curl() {
   if [[ -n "${GITHUB_TOKEN:-}" ]]; then
-    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-all-errors \
+    retry curl --proto '=https' --tlsv1.2 -fsSL \
       -H "Authorization: Bearer ${GITHUB_TOKEN}" \
       "$@"
   else
-    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 --retry-all-errors \
+    retry curl --proto '=https' --tlsv1.2 -fsSL \
       "$@"
   fi
 }
