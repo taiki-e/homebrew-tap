@@ -51,11 +51,11 @@ info() {
 }
 run_curl() {
   if [[ -n "${GITHUB_TOKEN:-}" ]]; then
-    retry curl --proto '=https' --tlsv1.2 -fsSL \
+    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 \
       -H "Authorization: Bearer ${GITHUB_TOKEN}" \
       "$@"
   else
-    retry curl --proto '=https' --tlsv1.2 -fsSL \
+    retry curl --proto '=https' --tlsv1.2 -fsSL --retry 10 \
       "$@"
   fi
 }
