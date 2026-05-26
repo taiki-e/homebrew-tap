@@ -22,15 +22,12 @@ concurrency:
 
 jobs:
   tidy:
-    uses: taiki-e/github-actions/.github/workflows/tidy.yml@5f549ff6b21e9a853f5f613784d5db27746fd2bc # main
+    uses: taiki-e/github-actions/.github/workflows/tidy.yml@1bb80ca038216cd1fb7b6ca6d76240b3772963ab # main
     permissions:
-      contents: write # for creating branch for pr
-      pull-requests: write # unused (used in `codegen-automerge: true` case)
       security-events: write # for github/codeql-action/*
-    secrets:
-      PR_TOKEN_APP_PRIVATE_KEY: ${{ secrets.PR_TOKEN_APP_PRIVATE_KEY }}
 
   test:
+    needs: tidy
     strategy:
       fail-fast: false
       matrix:
@@ -39,7 +36,6 @@ jobs:
           - ubuntu-22.04-arm
           - ubuntu-24.04
           - ubuntu-24.04-arm
-          - macos-14
           - macos-15
           - macos-15-intel
           - macos-26

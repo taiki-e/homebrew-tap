@@ -12,20 +12,15 @@ on:
     - cron: '0 0,6,12,18 * * *'
   workflow_dispatch:
 
-defaults:
-  run:
-    shell: bash --noprofile --norc -CeEuxo pipefail {0}
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
   cancel-in-progress: true
 
 jobs:
   formula:
-    uses: taiki-e/github-actions/.github/workflows/gen.yml@5f549ff6b21e9a853f5f613784d5db27746fd2bc # main
+    uses: taiki-e/github-actions/.github/workflows/gen.yml@1bb80ca038216cd1fb7b6ca6d76240b3772963ab # main
     permissions:
       contents: write # for creating branch for pr
-      pull-requests: write # for gh pr review --approve
     secrets:
       PR_TOKEN_APP_PRIVATE_KEY: ${{ secrets.PR_TOKEN_APP_PRIVATE_KEY }}
     with:
@@ -33,4 +28,3 @@ jobs:
       commit-script: tools/ci/formula.sh
       title: Update formula
       branch: update-formula
-      automerge: true
