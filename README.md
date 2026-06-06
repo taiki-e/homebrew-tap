@@ -11,9 +11,9 @@ brew install taiki-e/tap/<package>
 - [cargo-hack]: Cargo subcommand to provide various options useful for testing and continuous integration.
 - [cargo-llvm-cov]: Cargo subcommand to easily use LLVM source-based code coverage.
 - [cargo-minimal-versions]: Cargo subcommand for proper use of `-Z minimal-versions`.
-- [cargo-no-dev-deps]: Cargo subcommand for running cargo without dev-dependencies.
 - [parse-changelog]: Simple changelog parser, written in Rust.
 - [parse-dockerfile]: Dockerfile parser, written in Rust.
+- [cargo-no-dev-deps]: [DEPRECATED] Cargo subcommand for running cargo without dev-dependencies.
 
 [cargo-hack]: https://github.com/taiki-e/cargo-hack
 [cargo-llvm-cov]: https://github.com/taiki-e/cargo-llvm-cov
