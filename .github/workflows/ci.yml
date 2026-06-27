@@ -32,12 +32,14 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - ubuntu-26.04
+          # TODO: Errno::EINVAL: Invalid argument @ apply2files - /var/tmp/cargo-hack-20260627-2-mx7039
+          # - ubuntu-26.04
           - ubuntu-26.04-arm
           - ubuntu-24.04
           - ubuntu-24.04-arm
-          - ubuntu-22.04
-          - ubuntu-22.04-arm
+          # TODO: Errno::EINVAL: Invalid argument @ apply2files - /var/tmp/cargo-hack-20260627-2-mx7039
+          # - ubuntu-22.04
+          # - ubuntu-22.04-arm
           - macos-26
           - macos-15
           - macos-15-intel
