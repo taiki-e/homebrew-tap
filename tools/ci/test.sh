@@ -25,6 +25,7 @@ done
 
 x brew tap-new --no-git "${tap_name}"
 x cp -- Formula/*.rb "$(brew --repo "${tap_name}")"/Formula
+x brew trust "${tap_name}"
 
 for formula in "${formulas[@]}"; do
   x brew install "${tap_name}/${formula}"
