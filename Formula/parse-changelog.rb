@@ -4,25 +4,25 @@
 class ParseChangelog < Formula
   desc "Simple changelog parser, written in Rust"
   homepage "https://github.com/taiki-e/parse-changelog"
-  # version "0.6.17"
+  # version "0.6.18"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.17/parse-changelog-aarch64-apple-darwin.tar.gz"
-      sha256 "282d25dc8a8c2e667e22de70df284edfa5e24a6f3308b2a9b74557dbaaed4d9b"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.18/parse-changelog-aarch64-apple-darwin.tar.gz"
+      sha256 "56158c595174012c2116562de282bdbc35b4388856007db2aa991cb3a35debb4"
     else
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.17/parse-changelog-x86_64-apple-darwin.tar.gz"
-      sha256 "f252807a41d5b10839e63c5c39b342586b5ccdba2d61373e40356f4cf03a8369"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.18/parse-changelog-x86_64-apple-darwin.tar.gz"
+      sha256 "af5b9bf13e26ab93492592fb3d86d591398a7ac921f54f3d0086dae109639d70"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.17/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "bff12e434d13ef150e27c0494a0486ed4b3e85ba9e204fff06dfdfb19329f940"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.18/parse-changelog-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "ca1e216f84999487a73edff60f4df735584d5b5cae31617ac81450c4b6f2879a"
     else
-      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.17/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "d78fe1527b14d55328e3e8e130123cdbb3606d4055ca207f7e03ae51fc3c7e03"
+      url "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.18/parse-changelog-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "e0f0aa87a94501111052dbb7f3c79b28b61ab421427641ba9ac4e4ae61d6eee9"
     end
   end
 
