@@ -4,25 +4,25 @@
 class CargoMinimalVersions < Formula
   desc "Cargo subcommand for proper use of -Z minimal-versions"
   homepage "https://github.com/taiki-e/cargo-minimal-versions"
-  # version "0.1.38"
+  # version "0.1.39"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.38/cargo-minimal-versions-aarch64-apple-darwin.tar.gz"
-      sha256 "7a019676c0d44dc21040782cf82c85e14398e87b5d6dd986da11900d3490c0b0"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.39/cargo-minimal-versions-aarch64-apple-darwin.tar.gz"
+      sha256 "6b9d18a773613d3f5a67f137c1066b1e96c2c637a334d784b1fdc17e43fbde0c"
     else
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.38/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
-      sha256 "2c4f401584f81c8ce67b6f7a62d6c4296137de03439efd77bf5d84783d93c39c"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.39/cargo-minimal-versions-x86_64-apple-darwin.tar.gz"
+      sha256 "7a75b78335706a87e29e226b471aab927910548cc4aac2e2eae9a933e5daf139"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.38/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "f4a891075d85464c1577da647f042dc27c4bac9ddecf819ec270458afea8d3e1"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.39/cargo-minimal-versions-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "389cc1bf6be43d5cbe12d289e68319276639861fe95195578571f2c8d430411d"
     else
-      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.38/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "b4b5479ba5cfcf79b7478cffec8f73db88e07a50b301deebdc65eb8f34ed5607"
+      url "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.39/cargo-minimal-versions-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "185f79ddcf6fc7ef55419353f75ffca325df303d5917a84453669e3b8e2cab2c"
     end
   end
 
